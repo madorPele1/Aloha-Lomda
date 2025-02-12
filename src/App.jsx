@@ -11,7 +11,7 @@ import "./App.css";
 const FlyingBirds = () => (
   <>
     <motion.img
-      src="src/assets/graphics/bird.svg"
+      src="/assets/graphics/bird.svg"
       alt="Flying Bird"
       className="flying-bird"
       style={{ position: "absolute", top: "25%", width: "80px" }}
@@ -22,7 +22,7 @@ const FlyingBirds = () => (
       transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
     />
     <motion.img
-      src="src/assets/graphics/bird.svg"
+      src="/assets/graphics/bird.svg"
       alt="Flying Bird 2"
       className="flying-bird"
       style={{ position: "absolute", top: "75%", width: "60px" }}
@@ -97,7 +97,7 @@ const App = () => {
           onClick={() => setShowCredits(true)}
         >
           <img
-            src="src/assets/graphics/front-view-boat.svg"
+            src="/assets/graphics/front-view-boat.svg"
             className="credit-boat-img"
             alt="credit-boat"
           />
@@ -146,7 +146,7 @@ const App = () => {
         selectedChapter > 1 &&
         currentScreen === "chapter" && (
           <img
-            src={`src/assets/graphics/flags/flag${selectedChapter}.svg`}
+            src={`/assets/graphics/flags/flag${selectedChapter}.svg`}
             className="flag"
             alt={`Flag ${selectedChapter}`}
           />

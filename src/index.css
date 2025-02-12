@@ -1,5 +1,5 @@
 @font-face {
-  font-family: OmriNivFireshtein;
+  font-family: "OmriNivFireshtein";
   src: url(./assets/fonts/OhOmriNivFireshtein-Regular.woff);
 }
 
@@ -8,14 +8,14 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
-  src: url("../Rubik-Medium.ttf");
+  src: url(./assets/fonts/Rubik-Medium.ttf);
 }
 /* rubik-700 */
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("../Rubik-Bold.ttf");
+  src: url(./assets/fonts/Rubik-Bold.ttf);
 }
 
 :root {
