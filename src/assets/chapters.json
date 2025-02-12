@@ -1,0 +1,808 @@
+{
+  "chapters": [
+    {
+      "id": 0,
+      "title": "פתיחה",
+      "screens": [
+        {
+          "title": "אלוהה!🌺",
+          "text": "[b] ברוכים הבאים ללומדת הערכת סיכונים (ALOHA 😊 ) [/b] \n \n הלומדה תעזור לך ולך, קציני חומ\"ס בסדיר ובמילואים, לרענן ולשפר את הידע בחישובי הערכת סיכונים עבור תרחישים שונים של אירועי חומ\"ס."
+        },
+        {
+          "title": "",
+          "text": "הלומדה פותחה לשימוש בטלפון סלולרי בלבד, אך, לא לשכוח גם להיות עם לפטופ פתוח ליד לצורך חישובים במהלך הלמידה. \n  בשקופיות בהן תראו את הסמל: 🖥️ \n תדרשו להקליד את הנתונים בתוכנה שבמחשבכם. \n בנוסף, יש להגביר את הרמקולים על מנת לשמוע קריינות קולית."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "תרגול תוכנה בסיסי",
+      "screens": [
+        {
+          "title": "מבוא לשימוש והכרת התוכנה",
+          "text": "היי, הגעתם לשלב הראשון במסע, כאן נכיר את התוכנה. לתוכנה מספר פונקציות שעוזרות לחשב הערכת סיכונים לפי תרחישים שונים."
+        },
+        {
+          "title": "התחלת עבודה",
+          "text": "נפתח את התוכנה במחשב.\nאם חלון הפלט לא נפתח, נוכל לפתוח אותו בעזרת שימוש בכפתור File ואז על לחיצה על New",
+          "image": "src/assets/graphics/chapters/chapter1/1.png",
+          "clickableAreas": [
+            { "x": 50, "y": 90, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 170, "y": 160, "width": 50, "height": 30, "delay": 2000 }
+          ]
+        },
+        {
+          "title": "הזנת נתונים קבועים",
+          "text": "נבחר את מיקום התרחיש בלחיצה על Site Date ואחר כך --> Location",
+          "image": "src/assets/graphics/chapters/chapter1/2.png",
+          "clickableAreas": [
+            { "x": 210, "y": 128, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 210, "y": 190, "width": 10, "height": 30, "delay": 2000 }
+          ]
+        },
+        {
+          "title": "בחירת מיקום",
+          "text": "נחפש את המיקום. אם אתם ממש דייקנים, אפשר להוסיף מיקום בלחיצה על כפתור Add",
+          "image": "src/assets/graphics/chapters/chapter1/3.png",
+          "clickableAreas": [
+            { "x": 470, "y": 205, "width": 10, "height": 30, "delay": 1000 }
+          ]
+        },
+        {
+          "title": "הוספת מיקום",
+          "text": "נדגים: \n נשתמש בעיר תל אביב, \nנרשום את שם העיר ונסמן את האפשרות Not in US. נוסיף את הקואורדינטות המצוינות של העיר: \n 32°05’55.5ʺN 34°34’47.1ʺE \n ונלחץ OK",
+          "image": "src/assets/graphics/chapters/chapter1/4.png",
+          "clickableAreas": [
+            { "x": 270, "y": 100, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 50, "y": 190, "width": 10, "height": 30, "delay": 1500 },
+            { "x": 150, "y": 400, "width": 10, "height": 30, "delay": 2000 },
+            { "x": 230, "y": 400, "width": 10, "height": 30, "delay": 2300 },
+            { "x": 230, "y": 450, "width": 10, "height": 30, "delay": 2600 },
+            { "x": 150, "y": 450, "width": 10, "height": 30, "delay": 2900 },
+            { "x": 130, "y": 480, "width": 10, "height": 30, "delay": 3200 }
+          ]
+        },
+        {
+          "title": "הוספת מיקום",
+          "text": "נוסיף את שם המדינה - ISRAEL, נזין זמן GMT מינוס 2, נלחץ על standard time ונלחץ OK",
+          "image": "src/assets/graphics/chapters/chapter1/5.png",
+          "clickableAreas": [
+            { "x": 270, "y": 80, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 400, "y": 160, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 100, "y": 310, "width": 10, "height": 30, "delay": 1600 },
+            { "x": 130, "y": 380, "width": 10, "height": 30, "delay": 2000 }
+          ]
+        },
+        {
+          "title": "הוספת מיקום",
+          "text": "אחרי שהכנסנו את הנתונים, העיר תופיע במסך ונוכל לבחור בה, נלחץ Select ונמשיך.",
+          "image": "src/assets/graphics/chapters/chapter1/6.png",
+          "clickableAreas": [
+            { "x": 270, "y": 80, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 430, "y": 190, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "סוג הבנייה",
+          "text": "עכשיו, נבחר את סוג המבנה בעזרת Site Data ו-Building type.",
+          "image": "src/assets/graphics/chapters/chapter1/7.png",
+          "clickableAreas": [
+            { "x": 200, "y": 90, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 200, "y": 180, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "בחירת סוג הבנייה",
+          "text": "נסמן  Double storied building ו- Sheltered surroundings.",
+          "image": "src/assets/graphics/chapters/chapter1/8.png",
+          "clickableAreas": [
+            { "x": 200, "y": 190, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 200, "y": 330, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 140, "y": 410, "width": 10, "height": 30, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "בחירת תאריך ושעה",
+          "text": "נבחר שעה ותאריך ב-Date & Time .",
+          "image": "src/assets/graphics/chapters/chapter1/9.png",
+          "clickableAreas": [
+            { "x": 200, "y": 90, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 200, "y": 260, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "תאריך ושעה",
+          "text": "נבחרSet a constant time לשעה 23:00 כברירת מחדל.",
+          "image": "src/assets/graphics/chapters/chapter1/10.png",
+          "clickableAreas": [
+            { "x": 260, "y": 140, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 100, "y": 380, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "מסך הכימיקלים",
+          "text": "נעבור לבחור את סוג החומר המסוכן שמתאים לתרחיש בתפריט  SET UP ואז  Chemical.",
+          "image": "src/assets/graphics/chapters/chapter1/11.png",
+          "clickableAreas": [
+            { "x": 290, "y": 110, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 260, "y": 170, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "בחירת סוג החומר",
+          "text": "נבחר את החומר ונלחץ Select",
+          "image": "src/assets/graphics/chapters/chapter1/12.png",
+          "clickableAreas": [
+            { "x": 290, "y": 250, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 410, "y": 110, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "מסך תמיסות",
+          "text": "שימו לב שאפשר גם לבחור תמיסות. רק תזכרו לשים לב לריכוז החומר!",
+          "image": "src/assets/graphics/chapters/chapter1/13.png",
+          "clickableAreas": [
+            { "x": 100, "y": 100, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 170, "y": 260, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 410, "y": 110, "width": 10, "height": 30, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "נתונים מטאורולוגים",
+          "text": "עכשיו נוכל להזין נתונים מטאורולוגיים באירוע בתפריט  SetUp ובאפשרות Atmospheric ולאחר מכן User input",
+          "image": "src/assets/graphics/chapters/chapter1/14.png",
+          "clickableAreas": [
+            { "x": 170, "y": 90, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 170, "y": 150, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 410, "y": 150, "width": 10, "height": 30, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "נתונים מטאורולוגים",
+          "text": "בשורת [b]wind speed[/b] הזינו 3 והסימון meter/second. בשורת [b]wind is from[/b] הזינו W. בשורת [b]Measurment height[/b] הזינו 10 וודאו כי מסומן meters. בשורת [b]ground height[/b] ground Roughness הזינו urban or forest. בשורת [b]Cloud cover[/b] הזינו 7.",
+          "image": "src/assets/graphics/chapters/chapter1/15.png",
+          "clickableAreas": [
+            { "x": 150, "y": 90, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 320, "y": 90, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 150, "y": 130, "width": 10, "height": 30, "delay": 1600 },
+            { "x": 240, "y": 190, "width": 10, "height": 30, "delay": 1900 },
+            { "x": 370, "y": 190, "width": 10, "height": 30, "delay": 2200 },
+            { "x": 400, "y": 210, "width": 10, "height": 30, "delay": 2200 },
+            { "x": 30, "y": 290, "width": 10, "height": 30, "delay": 2500 },
+            { "x": 100, "y": 460, "width": 10, "height": 30, "delay": 2500 },
+            { "x": 320, "y": 570, "width": 10, "height": 30, "delay": 2800 }
+          ]
+        },
+        {
+          "title": "נתונים מטאורולוגים",
+          "text": " בשורת ה- [b]Air Temperature[/b]  נכתוב 25 מעלות צלזיוס, נוודא ש- Stability Class היא E. ב-[b]Inversion Height[/b] נבחר Inversion Present  ונכתוב 300 מטרים. את [b]Humidity[/b] נשאיר על 50 ונלחץ על OK.",
+          "image": "src/assets/graphics/chapters/chapter1/16.png",
+          "clickableAreas": [
+            { "x": 170, "y": 70, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 310, "y": 70, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 350, "y": 190, "width": 10, "height": 30, "delay": 1600 },
+            { "x": 390, "y": 205, "width": 10, "height": 30, "delay": 1900 },
+            { "x": 390, "y": 310, "width": 10, "height": 30, "delay": 2200 },
+            { "x": 340, "y": 360, "width": 10, "height": 30, "delay": 2500 }
+          ]
+        },
+        {
+          "title": "בחירת עוצמת המקור",
+          "text": "לבחירת עוצמת המקור יש להכנס למסך הראשי SetUp ולבחור Direct/Puddle/Tank בהתאם לסוג התרחיש.",
+          "image": "src/assets/graphics/chapters/chapter1/17.png",
+          "clickableAreas": [
+            { "x": 180, "y": 70, "width": 10, "height": 30, "delay": 1000 },
+            { "x": 170, "y": 160, "width": 10, "height": 30, "delay": 1300 },
+            { "x": 320, "y": 160, "width": 10, "height": 30, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "סקירת הפלט",
+          "text": "לאחר שהזנו את כל הנתונים, התוכנה מפיקה דף מידע מסכם בו ניתן לסקור את הנתונים שהוזנו במערכת.",
+          "image": "src/assets/graphics/chapters/chapter1/18.png"
+        },
+        {
+          "title": "חישוב אזורי סיכון",
+          "text": "לאחר הזנת כל הנתונים יש להיכנס למסך הראשי Display וללחוץ על Threat Zone",
+          "image": "src/assets/graphics/chapters/chapter1/19.png",
+          "clickableAreas": [
+            { "x": 440, "y": 50, "width": 0, "height": 0, "delay": 1000 },
+            { "x": 370, "y": 110, "width": 0, "height": 0, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "בחירת תרחיש לחישוב",
+          "text": "בחר באפשרות הראשונה Toxic of vapor cloud. ולאחר מכן OK להמשך",
+          "image": "src/assets/graphics/chapters/chapter1/20.png",
+          "clickableAreas": [
+            { "x": 40, "y": 170, "width": 0, "height": 0, "delay": 1000 },
+            { "x": 170, "y": 390, "width": 0, "height": 0, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "הזנת ערכי קצה לחישוב הערכת הסיכונים",
+          "text": "בחלונית הזו, נכתוב את נתוני הרעילות (או ערכי הקצה) לפי סוג התרחיש",
+          "image": "src/assets/graphics/chapters/chapter1/21.png",
+          "clickableAreas": [
+            { "x": 300, "y": 120, "width": 0, "height": 0, "delay": 1000 },
+            { "x": 300, "y": 220, "width": 0, "height": 0, "delay": 1300 },
+            { "x": 170, "y": 430, "width": 0, "height": 0, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "תוצאת הע\"ס",
+          "text": "",
+          "image": "src/assets/graphics/chapters/chapter1/22.png"
+        },
+        {
+          "title": "תוצאת הע\"ס",
+          "text": "[b]עכשיו, הקשבה מלאה![/b] \nחשוב לדעת שרק כאשר הנתונים המטאורולוגיים זמינים נוכל לקבוע את כיוון המניפה. עד אז, נניח כי הערכת הסיכונים מעגלית"
+        },
+        {
+          "title": "חישוב ריכוז חומר בנקודת הבחינה",
+          "text": "התוכנה גם מאפשרת לחשב ריכוז חומר מסוכן בנקודה מסוימת בעזרת פונקציית [b]Threat at Point[/b], אליה ניתן להגיע באמצעות לחיצה על הכפתור display",
+          "image": "src/assets/graphics/chapters/chapter1/23.png",
+          "clickableAreas": [
+            { "x": 490, "y": 50, "width": 0, "height": 0, "delay": 1000 },
+            { "x": 370, "y": 150, "width": 0, "height": 0, "delay": 1300 }
+          ]
+        },
+        {
+          "title": "הזנת נתונים",
+          "text": "בערך ציר ה-X נכתוב את מרחק הנקודה הנבדקת ובציר ה-Y נכתוב 0. נלחץ OK למסך הבא",
+          "image": "src/assets/graphics/chapters/chapter1/24.png",
+          "clickableAreas": [
+            { "x": 40, "y": 100, "width": 0, "height": 0, "delay": 1000 },
+            { "x": 370, "y": 300, "width": 0, "height": 0, "delay": 1300 },
+            { "x": 370, "y": 330, "width": 0, "height": 0, "delay": 1600 },
+            { "x": 480, "y": 340, "width": 0, "height": 0, "delay": 1900 },
+            { "x": 120, "y": 390, "width": 0, "height": 0, "delay": 1900 }
+          ]
+        },
+        {
+          "title": "חישוב ריכוז חומר בנקודת הבחינה",
+          "text": "הפלט הזה, שונה מהקודם והוא מראה את ריכוז החומר כתלות בזמן. אנחנו נתמקד בריכוז ה-OUTDOOR.",
+          "image": "src/assets/graphics/chapters/chapter1/25.png"
+        },
+        {
+          "title": "אז מה למדנו?",
+          "text": "",
+          "bulletPoints": [
+            "באילו תרחישים משמשת התוכנה.",
+            "הזנת נתונים ותרחישים על קבועי ברירת מחדל ",
+            " מהם נתוני AEGL2 ו AEGL 3",
+            "כיצד נראה הפלט המתקבל מהתוכנה."
+          ]
+        },
+        {
+          "title": "שימו לב למספר מגבלות חישוב בתוכנה:",
+          "text": "",
+          "bulletPoints": [
+            "התוכנה נועדה לביצוע הערכת סיכונים מהירה ופשוטה, לכן בהגדרה נוטה להחמרה בפלט.",
+            "התוכנה לא לוקחת בחשבון את השפעות התכסית והתבליט ולא את תוצרי התגובות הכימיות.",
+            "התוכנה מניחה כיוון רוח יציב ואחיד בכח מרחק מהמוקד.",
+            "התוכנה לא מדייקת במקרים של רוח חלשה מאוד או תנאים אטמוספריים יציבים מאוד."
+          ]
+        },
+        {
+          "title": "",
+          "text": "",
+          "question": {
+            "question": "מה היציבות המתקבלת כברירת מחדל בהצבת הנתונים המטאורולוגיים?",
+            "answer": ["E", "e"]
+          }
+        },
+        {
+          "title": "",
+          "text": "",
+          "question": {
+            "question": "מהי השעה המוזנת כתרחיש ברירת מחדל למדידת תרחיש ייחוס מחמיר?",
+            "answer": ["23:00", "23"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "חישוב תרחישים שונים",
+      "screens": [
+        {
+          "title": "תרחישי הערכת הסיכונים",
+          "text": "עכשיו החלק המעניין, הגיע הזמן שנבין מתי אנחנו משתמשים באיזה תרחיש להערכת הסיכונים לחומרים שונים"
+        },
+        {
+          "title": "לחצו על כל אחד מהתרחישים על מנת ללמוד איך משתמשים בו ומתי:",
+          "buttons": [
+            {
+              "label": "DIRECT",
+              "subLabel": "מוקד רגעי",
+              "firstScreen": 2,
+              "subject": "src/assets/graphics/subjects/direct.svg",
+              "backgroundColor": "#C1E3E6"
+            },
+            {
+              "label": "TANK",
+              "subLabel": "שחרור ממיכל",
+              "firstScreen": 12,
+              "subject": "src/assets/graphics/subjects/tank.svg",
+              "backgroundColor": "#FDF5E1"
+            },
+            {
+              "label": "PUDDLE",
+              "subLabel": "אידוי שפך לאורך זמן",
+              "firstScreen": 25,
+              "subject": "src/assets/graphics/subjects/puddle.svg",
+              "backgroundColor": "#A7B7B4"
+            }
+          ]
+        },
+        {
+          "title": "DIRECT",
+          "text": "\"מוקד רגעי\" מאפשר לחשב שחרור מיידי של גז או אדים לאוויר. תרחיש זה נפוץ במקרה של התבקעות אריזה המכילה גז בלחץ. \n  צפו בסרטון הבא ע\"י לחיצה על התמונה:",
+          "image": "src/assets/graphics/video-frames/direct.svg",
+          "video": "src/assets/graphics/videos/direct.mp4"
+        },
+        {
+          "title": "בחירת סוג המקור - DIRECT",
+          "text": "לאחר הזנת נתוני ברירת המחדל, יש לבחור את סוג המקור עד ידי כניסה למסך הראשי  SetUp ולבחור Direct",
+          "image": "src/assets/graphics/chapters/chapter2/direct1.png",
+          "clickableAreas": [
+            { "x": 210, "y": 70, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 170, "y": 200, "width": 50, "height": 30, "delay": 1300 },
+            { "x": 410, "y": 200, "width": 50, "height": 30, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "הזנת פרטים על המקור - DIRECT",
+          "text": "נכניס את כמות החומר הנבדקת בק\"ג ונבחר Instantaneous source, נכתוב 0 בגובה המקור וOK למעבר הלאה",
+          "image": "src/assets/graphics/chapters/chapter2/direct2.png",
+          "clickableAreas": [
+            { "x": 210, "y": 90, "width": 10, "height": 10, "delay": 1000 },
+            { "x": 70, "y": 190, "width": 10, "height": 10, "delay": 1300 },
+            { "x": 70, "y": 270, "width": 10, "height": 10, "delay": 1600 },
+            { "x": 170, "y": 390, "width": 10, "height": 10, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "הזנת נתוני חומר לצורך חישוב הע\"ס בתוכנה​",
+          "text": "במסך הזה נבחר באפשרות Toxic of vapor cloud, ונלחץ OK",
+          "image": "src/assets/graphics/chapters/chapter2/direct3.png",
+          "clickableAreas": [
+            { "x": 40, "y": 170, "width": 10, "height": 10, "delay": 1000 },
+            { "x": 180, "y": 370, "width": 10, "height": 10, "delay": 1300 }
+            
+          ]
+        },
+        {
+          "title": "בחירת אפשרות הזנת נתונים ידניים​",
+          "text": "נבחר בתרחיש זה את השימוש ב- User interface​  ונזין נתוני AEGL עבור 10 דק'. ניקח נתונים אלו מאתר CAMEO",
+          "image": "src/assets/graphics/chapters/chapter2/direct4.png",
+          "clickableAreas": [
+            { "x": 110, "y": 100, "width": 10, "height": 10, "delay": 1000 },
+            { "x": 140, "y": 235, "width": 10, "height": 10, "delay": 1300 },
+            { "x": 180, "y": 390, "width": 10, "height": 10, "delay": 1600 }
+            
+          ]
+        },
+        {
+          "title": "הזנת נתוני חומר לצורך חישוב הע\"ס בתוכנה​",
+          "text": "לדוגמא, עבור תרחיש פגיעה באמוניה גזית, נשתמש בנתונים עבור 10 דק' כפי שניתן לראות כאן. בתום הזנת הנתונים נקבל את התוצאה הדרושה.​",
+          "image": "src/assets/graphics/chapters/chapter2/direct5.png",
+          "clickableAreas": [
+            { "x": 300, "y": 120, "width": 0, "height": 0, "delay": 1000 },
+            { "x": 300, "y": 220, "width": 0, "height": 0, "delay": 1300 },
+            { "x": 170, "y": 430, "width": 0, "height": 0, "delay": 1600 }
+          ]
+        },
+        {
+          "title": "הפלט המתקבל – הסבר​",
+          "text": "ניתן לראות כי לאחר הזנת הנתונים מתקבלות תוצאות עבור טווח התפשטות החומר. בנוסף, ניתן לראות כי האירוע מסתיים בזמן הקטן מ-10 דק, לכן הפרמטרים הנבחרים לתרחיש זה הינם PAC-3/2 בקבוע זמן של 10 דק'",
+          "image": "src/assets/graphics/chapters/chapter2/direct6.png"
+        },
+        {
+          "title": "DIRECT שאלה",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "מה גובה המקור המוזן בבחירת תרחיש זה?",
+            "answer": ["0", "0 מטר", "0 מ'", "10 מטרים"]
+          }
+        },
+        {
+          "title": "DIRECT שאלה",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "אילו נתוני PAC-3/2 נלקחים בחישוב תרחיש זה? 10 או 60 דק'?​",
+            "answer": ["10", "10 מ", "10 מטר", "10 מ'", "10 מטר"]
+          }
+        },
+        {
+          "title": "DIRECT",
+          "text": "סיימתם ללמוד על תרחיש DIRECT! לחצו על סמל התרחיש כדי ללמוד על שאר סוגי התרחישים:",
+          "image": "",
+          "subject": {
+              "endSubject": "true"
+          }
+        },
+        {
+          "title": "TANK",
+          "text": "תרחיש זה מדמה שחרור ממיכל אחסון, הוא מתאים לדליפות או קרעים באריזות אחסון. צפו בסרטון הבא ע\"י לחיצה על התמונה:",
+          "image": "src/assets/graphics/video-frames/tank.svg",
+          "video": "src/assets/graphics/videos/tank.mp4"
+        },
+        {
+          "title": "בחירת סוג המקור - Tank​",
+          "text": "לבחירת סוג המקור יש להכנס למסך הראשי SetUp ולבחור Tank",
+          "image": "src/assets/graphics/chapters/chapter2/tank1.png"
+        },
+        {
+          "title": "הזנת נתונים (גודל המיכל, נפח וצורה)​",
+          "text": "בתרחיש זה חייבים להזין את נתוני המכלים. מספיקה הזנה של שני ערכים בלבד על מנת שהתוכנה תחשב את הערך השלישי",
+          "image": "src/assets/graphics/chapters/chapter2/tank2.png"
+        },
+        {
+          "title": "הזנת נתונים (מצב צבירה וטמפרטורה)​",
+          "text": "הנתונים המוזנים בחלק הזה הם נתוני ברירת מחדל, במידה וקיים מידע אחר על טמפ' המיכל, יש לשנות את ערך ברירת המחדל. להמשך לחץ OK",
+          "image": "src/assets/graphics/chapters/chapter2/tank3.png"
+        },
+        {
+          "title": "הזנת נתונים (אחוז נפחי של החומר במיכל)​",
+          "text": "יש לוודא שכמות החומר אינה חורגת מנפח המיכל - משמע, אינה עולה מעל 100%)",
+          "image": "src/assets/graphics/chapters/chapter2/tank4.png"
+        },
+        {
+          "title": "הזנת נתונים (מיקום הפגיעה במיכל)​",
+          "text": "נבחר באפשרות ראשונה ונלחץ OK",
+          "image": "src/assets/graphics/chapters/chapter2/tank5.png"
+        },
+        {
+          "title": "הזנת נתונים (צורה וגודל נקודת הפגיעה)​",
+          "text": "בעמוד זה יש להזין את צורת נקודת הפגיעה/כשל ולהזין 5 ס\"מ בגודל. להמשך לחץ OK",
+          "image": "src/assets/graphics/chapters/chapter2/tank6.png"
+        },
+        {
+          "title": "הזנת נתונים (מרחק נקודת הכשל ביחס לכמות במיכל)​",
+          "text": "בתרחיש מחמיר נניח פגיעה בתחתית המיכל, משמע בגובה 0. לאחר הזנת הנתונים נלחץ OK להמשך",
+          "image": "src/assets/graphics/chapters/chapter2/tank7.png"
+        },
+        {
+          "title": "TANK",
+          "text": "ראינו שמספר רב של גורמים משפיעים על התוצאה של התרחיש, במסך הבא, נציג כיצד שינוי נתונים שונים משפיעים על הפלט של התוכנה.",
+          "image": ""
+        },
+        {
+          "title": "TANK",
+          "text": "",
+          "image": "",
+          "graph": {
+            "title": "חישוב שינוי בפרמטרי מיכל",
+            "defaultVariable": "מיקום פגיעה",
+            "variables": {
+              "מיקום פגיעה": {
+                "sliderValues": [0, 15, 25, 50, 99],
+                "xPositions": [651, 708, 679, 607, 434],
+                "measureUnits": "[%]"
+              },
+              "טמפ' מיכל": {
+                "sliderValues": [-45, -35, -10, 25, 35],
+                "xPositions": [85, 99, 539, 651, 661],
+                "measureUnits": "[C°]"
+              },
+              "קוטר חור": {
+                "sliderValues": [1, 2.5, 5, 10],
+                "xPositions": [152, 312, 317, 317],
+                "measureUnits": "[cm]"
+              }
+            }
+          }
+        },
+        {
+          "title": "",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "מנה אחד מנתוני החובה שיש להזין לטובת חישוב תרחיש זה:​",
+            "answer": ["נפח", "קוטר", "אורך"]
+          }
+        },
+        {
+          "title": "",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "מה קוטר החומר המוגדר כקוטר ברירת מחדל בחישוב תרחיש מיכל?​",
+            "answer": ["5", "5סמ", "5 סמ", "5 ס\"מ", "5 סנטימטר", "5 סנטימטרים"]
+          }
+        },
+        {
+          "title": "TANK",
+          "text": "סיימתם ללמוד על תרחיש TANK! לחצו על סמל התרחיש כדי ללמוד על שאר סוגי התרחישים:",
+          "image": "",
+          "subject": {
+            "subject": "src/assets/graphics/subjects/tank.svg",
+            "endSubject": "true"
+          }
+        },
+        {
+          "title": "PUDDLE",
+          "text": "\"תרחיש שפך\" מאפשר לחשב דליפה של פאזה נוזלית על הקרקע אשר מתאדה באופן הדרגתי לאוויר. \n צפו בסרטון הבא ע\"י לחיצה על התמונה:",
+          "image": "src/assets/graphics/video-frames/puddle.svg",
+          "video": "src/assets/graphics/videos/puddle.mp4"
+        },
+        {
+          "title": "בחירת סוג המקור - Puddle​",
+          "text": "לבחירת סוג המקור יש להיכנס למסך הראשי SetUp ולבחור Puddle",
+          "image": "src/assets/graphics/chapters/chapter2/puddle1.png"
+        },
+        {
+          "title": "הזנת נתונים​",
+          "text": "תחילה יש לבחור את סוג הpuddle. האם מדובר בשפך שמתנדף או בוער. לאחר בחירת סוג השלולית יש ללחוץ OK להמשך",
+          "image": "src/assets/graphics/chapters/chapter2/puddle2.png"
+        },
+        {
+          "title": "הזנת נתונים על מימדי השפך​",
+          "text": "בחלק הבא יש להגדיר את נתוני שטח וכמות השפך. יש לשים לב ליחידות המידה המתאימות. לאחר שהגדרנו את הנתונים יש ללחוץ OK להמשך",
+          "image": "src/assets/graphics/chapters/chapter2/puddle3.png"
+        },
+        {
+          "title": "חישוב שטח שפך​",
+          "text": "חישוב שטח השפך מתייחס לשפך שלולית חומר (ללא נוכחות מאצרה). יש לשים לב לשוני בין החישובים לצורך במיגון (יש להניח עובי שכבת נוזל של 1 ס\"מ) ובחישוב לפק\"ל אופציות (יש להניח עובי שכבת נוזל של 10 ס\"מ)",
+          "image": "src/assets/graphics/chapters/chapter2/puddle4.png"
+        },
+        {
+          "title": "הזנת נתוני מימדי השפך​",
+          "text": "בחלק הבא יש להגדיר את נתוני שטח וכמות השפך. יש לשים לב ליחידות המידה המתאימות. לאחר שחישבנו את השטח נזין את הנתונים ונלחץ על OK להמשך",
+          "image": "src/assets/graphics/chapters/chapter2/puddle5.png"
+        },
+        {
+          "title": "הזנת נתוני הקרקע",
+          "text": "בחלק זה יש לסמן את סוג הקרקע. ברירת המחדל הינה אתר עם רצפת בטון. יש להשאיר את ברירת המחדל של טמפרטורת הקרקע והנוזל ל25 מעלות צלזיוס.",
+          "image": "src/assets/graphics/chapters/chapter2/puddle6.png"
+        },
+        {
+          "title": "הזנת נתוני חומר לצורך חישוב הע\"ס בתוכנה​",
+          "text": "חר בבחירה הראשונה Toxic of vaper cloud. ולאחר מכן OK להמשך",
+          "image": "src/assets/graphics/chapters/chapter2/puddle7.png"
+        },
+        {
+          "title": "הזנת נתוני חומר לצורך חישוב הע\"ס בתוכנה​",
+          "text": "כאן נשתמש בנתוני AEGL-3/2 עבור 60 דק' שמופיעים כברירת מחדל בתוכנה",
+          "image": "src/assets/graphics/chapters/chapter2/puddle8.png"
+        },
+        {
+          "title": "הפלט המתקבל – הסבר​",
+          "text": "הפלט שמתקבל מראה 2 דברים: ",
+          "image": "src/assets/graphics/chapters/chapter2/puddle9.png",
+          "bulletPoints": [
+            "רדיוס אזורי הסיכון",
+            "מתי מתקבל הריכוז המקסימלי של התרחיש ותוך כמה זמן מסתיים האירוע. נשים לב כי משך התרחיש המקסימלי של הינו שעה"
+          ]
+        },
+        {
+          "title": "PUDDLE",
+          "text": "ראינו שמספר רב של גורמים משפיעים על התוצאה של התרחיש, במסך הבא, נציג כיצד שינוי השטח משפיע על הפלט של התוכנה.",
+          "image": ""
+        },
+        {
+          "title": "PUDDLE",
+          "text": "",
+          "image": "",
+          "graph": {
+            "title": "חישוב שינוי שטח שפך",
+            "defaultVariable": "שטח שפך",
+            "variables": {
+              "שטח שפך": {
+                "sliderValues": [12, 20, 30, 50],
+                "xPositions": [378, 484, 591, 749],
+                "measureUnits": "[m²]"
+              }
+            }
+          }
+        },
+        {
+          "title": "PUDDLE שאלה",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "מה הוא המדד שנדרש לחשב לטובת חישוב תרחיש שפך? (רמז: תלוי בצפיפות החומר)",
+            "answer": ["שטח שלולית"]
+          }
+        },
+        {
+          "title": "PUDDLE שאלה",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "אילו נתוני AEGL נלקחים בחישוב תרחיש זה (10 או 60 דק')?​",
+            "answer": ["60", "60 דק", "60 דקות", "60 דק'"]
+          }
+        },
+        {
+          "title": "PUDDLE",
+          "text": "סיימתם ללמוד על תרחיש PUDDLE! לחצו על סמל התרחיש כדי ללמוד על שאר סוגי התרחישים:",
+          "image": "",
+          "subject": {
+            "subject": "src/assets/graphics/subjects/puddle.svg",
+            "endSubject": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "פירוש הע\"ס לרמה הממונה",
+      "screens": [
+        {
+          "title": "פירוש הערכת הסיכונים הלכה למעשה",
+          "text": "בחלק זה נסביר את משמעות הערכת הסיכונים וכיצד היא מתורגמת לפעולה בעת אירוע חומ\"ס. \n מה בעצם עושים עם התוצאות?",
+          "image": "src/assets/graphics/chapters/chapter3/1.png"
+        },
+        {
+          "title": "פירוש הערכת הסיכונים הלכה למעשה",
+          "text": "התוצאה המתקבלת מציגה את טווחי התפשטות החומר ויצירת אזורי ריכוז שונים.  \n לחצו על שמות האזורים כדי לללמוד עליהם.",
+          "image": "src/assets/graphics/chapters/chapter3/2.png",
+          "interactiveAreas": [
+            "אזור חם - אזור בו הריכוז באוויר של חומר, מעליו האוכלוסייה הכללית, בחשיפה של קבועי זמן צפויה לחוות השפעות מסכנות חיים או מוות.",
+            "אזור פושר - אזור בו הריכוז באוויר של חומר, מעליו האוכלוסייה הכללית, בחשיפה של קבועי זמן  צפויה לחוות, השפעה בריאותית חמורה, בלתי הפיכה וארוכת טווח או הפוגעת ביכולת ההימלטות מאזור האירוע."
+          ]
+        },
+        {
+          "title": "חשוב להכיר את השיקולים המנחים למתן הנחיות לאוכלוסייה באירוע חומ\"ס",
+          "text": "ההנחיה המיידית הינה הסתגרות!",
+          "image": "",
+          "bulletPoints": [
+            "בשלב הבא יבחנו ההנחיות פרטיות אל מול מתקנים רגישים באזור הסיכון",
+            "המצאות באזור הסיכון לא בהכרח יוביל למוות - זמן החשיפה מאפשר המלטות והתמגנות ",
+            "יש להדריך את האזרח במהלך אירוע החומ\"ס",
+            "אזור חם - כניסת כוחות שממוגנים לכל הפחות במנ\"פ",
+            "אזור פושר- כניסה במיגון מסכת פנים ומסנן",
+            "הערכת הסיכונים מתעלמת מטופוגרפיה (תכסית ותבליט) ולכן הערכת הסיכונים מחמירה",
+            "כוחות כב\"ה בשטח יבצעו דיוקים בהערכת הסיכונים"
+          ]
+        },
+        {
+          "title": "חשוב להכיר את השיקולים המנחים למתן הנחיות לאוכלוסייה באירוע חומ\"ס",
+          "text": "יש להדריך את האזרח במהלך אירוע החומ\"ס: באזור חם - כניסת כוחות שממוגנים לכל הפחות במנ\"פ. אזור פושר- כניסה במיגון מסכת פנים ומסנן"
+        },
+        {
+          "title": "חשוב להכיר את השיקולים המנחים למתן הנחיות לאוכלוסייה באירוע חומ\"ס",
+          "text": "הערכת הסיכונים מתעלמת מטופוגרפיה (תכסית ותבליט) ולכן הערכת הסיכונים מחמירה. כוחות כב\"ה בשטח יבצעו דיוקים בהערכת הסיכונים"
+        },
+        {
+          "title": "",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "האם  PAC-3  מתייחס לאזור \"פושר\"?",
+            "answer": ["לא", "לא נכון"]
+          }
+        },
+        {
+          "title": "",
+          "text": "",
+          "image": "",
+          "question": {
+            "question": "האם  PAC-2  מתייחס לאזור \"חם\"?",
+            "answer": ["לא", "לא נכון"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "הערכת סיכונים כתלות בפרמטרים מטאורולוגיים",
+      "screens": [
+        {
+          "title": "הערכות סיכונים כתלות בפרמטרים מטאורולוגיים",
+          "text": "ראינו שמספר רב של גורמים משפיעים על התוצאה של התרחיש, במסך הבא, נציג כיצד שינוי נתונים שונים משפיעים על הפלט של התוכנה. ניתן להזיז את הסליידר ולראות איך הנתונים משפיעים על התוצאה הסופית"
+        },
+        {
+          "title": "",
+          "text": "",
+          "image": "",
+          "graph": {
+            "title": "סקלת פרמטרים מטאורולוגיים",
+            "defaultVariable": "מהירות הרוח",
+            "variables": {
+              "מהירות הרוח": {
+                "sliderValues": [1, 2, 3, 4, 5],
+                "xPositions": [69, 49, 61, 53, 49],
+                "measureUnits": "[m/s]"
+              },
+              "גובה מדידה": {
+                "sliderValues": [10, 12, 15, 20],
+                "xPositions": [227, 230, 235, 239],
+                "measureUnits": "[m]"
+              },
+              "טמפ' הסביבה": {
+                "sliderValues": [10, 15, 25, 35, 45],
+                "xPositions": [221, 223, 227, 230, 233],
+                "measureUnits": "[C°]"
+              },
+              "כיסוי עננים": {
+                "sliderValues": [3, 5, 7],
+                "xPositions": [227, 227, 227]
+              },
+              "מצב יציבות": {
+                "sliderValues": [1, 2],
+                "xPositions": [227, 276]
+              },
+              "חספוס קרקע": {
+                "sliderValues": [0.01, 10, 100],
+                "xPositions": [329, 357, 245],
+                "measureUnits": "[cm]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "ייצוא תוצאות ל-maps",
+      "screens": [
+        {
+          "title": "ייצוא תוצאות למערכת GIS",
+          "text": "בחלק זה נלמד כיצד ניתן להטמיע את תוצאות הערכת הסיכונים במפת גוגל מפות, ובכך לתחום את האזור החם והפושר של פגיעה אפשרית בחומ\"ס.",
+          "image": "src/assets/graphics/chapters/chapter5/0.png"
+        },
+        {
+          "title": "ייצוא תוצאות",
+          "text": "את תוצאות הפלט ניתן לייצא לפורמט KML. ניגש למסך הראשי תחת File, נסמן .export threat zone",
+          "image": "src/assets/graphics/chapters/chapter5/1.png"
+        },
+        {
+          "title": "ייצוא תוצאות",
+          "text": "נלחץ על האפשרות השנייה.",
+          "image": "src/assets/graphics/chapters/chapter5/2.png"
+        },
+        {
+          "title": "הזנת קואורדינטות",
+          "text": "בחלון שנפתח, נכתוב את נקודת ה-נ\"צ של המקום הדרוש.",
+          "image": "src/assets/graphics/chapters/chapter5/3.png"
+        },
+        {
+          "title": "בחירת מיקום",
+          "text": "נלחץ לחיצה כפולה על המיקום הדרוש ובתחתית המסך יופיעו ערכים מספריים",
+          "image": "src/assets/graphics/chapters/chapter5/4.png"
+        },
+        {
+          "title": "מציאת קוארדינטות",
+          "text": "לחיצה נוספת עליהם תציג את הערכים המספריים עם קואורדינטות ברשת הגאוגרפית הנדרשת",
+          "image": "src/assets/graphics/chapters/chapter5/5.png"
+        },
+        {
+          "title": "מציאת קוארדינטות",
+          "text": "נזין את הערכים הללו בחזרה בתוך תוכנת ה-ALOHA להשלמת הפקת קובץ ה-KML. שימו לב לכיוונים והמספרים והזינו אותם בצורה נכונה.",
+          "image": "src/assets/graphics/chapters/chapter5/6.png"
+        },
+        {
+          "title": "הזנת קוארדינטות",
+          "text": "לאחר השלמת הנתונים, נלחץ על כפתור ה-OK ונשמור את הקובץ בתיקייה",
+          "image": "src/assets/graphics/chapters/chapter5/7.png"
+        },
+        {
+          "title": "יצירת מפה חדשה",
+          "text": "בדפדפן במחשב, נכתוב בשורת החיפוש \"Google My Maps\" וניצור מפה חדשה",
+          "image": "src/assets/graphics/chapters/chapter5/8.png"
+        },
+        {
+          "title": "יצירת מפה חדשה",
+          "text": "תחת אחת השכבות, נלחץ על האייקון ⋮ ונלחץ על ייבוא של קובץ ה-KML ששמרנו בחלק הקודם",
+          "image": "src/assets/graphics/chapters/chapter5/9.png"
+        },
+        {
+          "title": "הפלט המתקבל- מפה",
+          "text": "נטען את הקובץ מתיקיית השמירה כך שהוא יוצג בדיוק בנקודה שהצבנו על פי הקואורדינטות",
+          "image": "src/assets/graphics/chapters/chapter5/10.png"
+        },
+        {
+          "title": "הפלט המתקבל",
+          "text": "שימו לב שהתוכנה משתמשת בפלט של האלוהה ויוצרת טווחי \"חם\" ו\"פושר\" לפי הצבעים המתאימים",
+          "image": "src/assets/graphics/chapters/chapter5/11.png"
+        }
+      ]
+    }
+  ]
+}
