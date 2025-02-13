@@ -16,7 +16,7 @@ body {
 }
 
 body.mount-background {
-  background-image: url(/src/assets/graphics/backgrounds/mount-background.svg);
+  background-image: url(/assets/graphics/backgrounds/mount-background.svg);
   background-size: 100%;
 }
 @media only screen and (max-width: 600px) {
@@ -25,12 +25,12 @@ body.mount-background {
   }
 }
 body.sea-background {
-  background-image: url(/src/assets/graphics/backgrounds/sea-background.svg);
+  background-image: url(/assets/graphics/backgrounds/sea-background.svg);
   background-color: #6acde3;
   background-size: cover;
 }
 body.palm-background {
-  background-image: url(/src/assets/graphics/backgrounds/palm-background.svg);
+  background-image: url(/assets/graphics/backgrounds/palm-background.svg);
   background-size: 100%;
 }
 
@@ -184,7 +184,7 @@ body.palm-background {
 }
 
 li {
-  list-style-image: url("src/assets/graphics/icons/palm-tree-icon.png");
+  list-style-image: url("/assets/graphics/icons/palm-tree-icon.png");
 }
 
 /* interactive-area  */
@@ -672,7 +672,7 @@ li {
 .virtual-mouse {
   width: 60px;
   height: 60px;
-  background-image: url(/src/assets/graphics/mouse.svg);
+  background-image: url(/assets/graphics/mouse.svg);
   background-size: 100%;
   position: absolute;
   pointer-events: none;

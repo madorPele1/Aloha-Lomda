@@ -83,7 +83,7 @@ const Map = ({
             >
               <img
                 className={`island-img ${isGlowing(chapter) ? "glowing" : ""}`}
-                src={`src/assets/graphics/islands/island${chapter}.svg`}
+                src={`${import.meta.env.BASE_URL}assets/graphics/islands/island${chapter}.svg`}
                 alt={`island${chapter}`}
               />
             </button>

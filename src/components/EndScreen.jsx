@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Credits from "./Credits";
-import womanSoldier from "../assets/graphics/soldiers/standing-woman-soldier.svg";
-import manSoldier from "../assets/graphics/soldiers/standing-man-soldier.svg";
-import bird from "../assets/graphics/bird.svg"; // Import the bird image
+import womanSoldier from "/assets/graphics/soldiers/standing-woman-soldier.svg";
+import manSoldier from "/assets/graphics/soldiers/standing-man-soldier.svg";
+import bird from "/assets/graphics/bird.svg"; // Import the bird image
 
 const EndScreen = () => {
   const [showCredits, setShowCredits] = useState(false); // track the screen's number in the chapter

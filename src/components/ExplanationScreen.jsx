@@ -22,7 +22,9 @@ const ExplanationScreen = ({
   video,
   selectedChapter,
 }) => {
-  const audioSrc = `src/assets/audio/chapters/chapter${selectedChapter}/${screenIndex + 1}.m4a`;
+  const audioSrc = `${
+    import.meta.env.BASE_URL
+  }assets/audio/chapters/chapter${selectedChapter}/${screenIndex + 1}.m4a`;
   const [play, { stop, sound }] = useSound(audioSrc);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isDeveloperMode, setIsDeveloperMode] = useState(false);
@@ -48,7 +50,10 @@ const ExplanationScreen = ({
   useEffect(() => setIsQuestionAnswered(!question), [question]);
 
   const handleSkipAudio = () => {
-    if (isDeveloperMode || prompt("הזינו סיסמא על מנת להפעיל מצב מפתחים") === "devpass") {
+    if (
+      isDeveloperMode ||
+      prompt("הזינו סיסמא על מנת להפעיל מצב מפתחים") === "devpass"
+    ) {
       stop();
       setIsAudioPlaying(false);
       setIsDeveloperMode(true);
@@ -65,30 +70,48 @@ const ExplanationScreen = ({
     onSubjectSelect(topic);
   };
 
-  const allTopicsCompleted = buttons && completedTopics.length === buttons.length;
-  const isContinueDisabled = isAudioPlaying || (!isQuestionAnswered && question);
+  const allTopicsCompleted =
+    buttons && completedTopics.length === buttons.length;
+  const isContinueDisabled =
+    isAudioPlaying || (!isQuestionAnswered && question);
 
   return (
     <div className="explanation-screen">
       <div className="navbar">
         <div className="fixed-navbar">
-          <button className="hamburger-menu-btn" onClick={() => setIsMenuOpen((prev) => !prev)}>
-            <img style={{ width: "30px" }} src="src/assets/graphics/icons/hamburger-menu.svg" alt="hamburger-menu" />
+          <button
+            className="hamburger-menu-btn"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <img
+              style={{ width: "30px" }}
+              src={`${import.meta.env.BASE_URL}assets/graphics/icons/hamburger-menu.svg`}
+              alt="hamburger-menu"
+            />
           </button>
           <h1>{chapter}</h1>
         </div>
 
         <div className={`opened-navbar ${isMenuOpen ? "visible" : ""}`}>
           <button className="sound-btn" disabled={isAudioPlaying}>
-            <img src="src/assets/graphics/icons/sound-icon.svg" alt="sound-icon" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/graphics/icons/sound-icon.svg`} 
+              alt="sound-icon"
+            />
             {isAudioPlaying ? "Playing..." : "השמעה חוזרת"}
           </button>
           <button className="back-to-map-btn" onClick={onBackToMap}>
-            <img src="src/assets/graphics/icons/back-to-map-icon.svg" alt="back-to-map" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/graphics/icons/back-to-map-icon.svg`} 
+              alt="back-to-map"
+            />
             חזרה למפה
           </button>
           <button className="skip-btn" onClick={handleSkipAudio}>
-            <img src="src/assets/graphics/icons/skip-icon.svg" alt="skip-icon" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/graphics/icons/skip-icon.svg`} 
+              alt="skip-icon"
+            />
             מצב מפתחים
           </button>
         </div>
@@ -106,13 +129,17 @@ const ExplanationScreen = ({
                 style={{
                   fontWeight: "800",
                   boxShadow: `6px 6px ${button.backgroundColor}`,
-                  opacity: completedTopics.includes(button.firstScreen) ? 0.5 : 1,
+                  opacity: completedTopics.includes(button.firstScreen)
+                    ? 0.5
+                    : 1,
                 }}
                 onClick={() => handleSubjectSelect(button.firstScreen)}
               >
                 {button.label}
-                <p style={{ fontFamily: "rubik", fontWeight: "400" }}>{button.subLabel}</p>
-                <img src={button.subject} alt={`${button.label}-img`} />
+                <p style={{ fontFamily: "rubik", fontWeight: "400" }}>
+                  {button.subLabel}
+                </p>
+                <img src={`${import.meta.env.BASE_URL}${button.subject}`} alt={`${button.label}-img`} />
               </button>
             ))}
           </div>

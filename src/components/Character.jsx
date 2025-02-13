@@ -34,8 +34,8 @@ const Character = ({
       >
         {clickableAreas && (
           <img
-            src="src/assets/graphics/icons/computer-icon.svg"
-            className="computer-icon"
+          src={`${import.meta.env.BASE_URL}assets/graphics/icons/computer-icon.svg`}
+          className="computer-icon"
             alt="computer-icon"
           />
         )}
@@ -114,7 +114,7 @@ const Character = ({
           style={{ display: endSubject === "true" ? "flex" : "none" }}
         >
           <img
-            src={subject?.subject}
+              src={`${import.meta.env.BASE_URL}${subject?.subject}`}
             alt="subject-img-btn"
             style={{ width: "13vh" }}
           />
@@ -125,7 +125,7 @@ const Character = ({
       {!graph && (
         <img
           className="character-img"
-          src={`src/assets/graphics/soldiers/${
+          src={`${import.meta.env.BASE_URL}assets/graphics/soldiers/${
             image ? "explain" : question ? "question" : "standing"
           }-${
             selectedChapter && selectedChapter % 2 !== 0 ? "man" : "woman"

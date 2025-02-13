@@ -5,13 +5,13 @@ import ExplanationScreen from "./components/ExplanationScreen";
 import PathSelection from "./components/PathSelection";
 import Map from "./components/Map";
 import Credits from "./components/Credits";
-import chaptersData from "./assets/chapters.json";
+import chaptersData from "./components/chapters.json";
 import "./App.css";
 
 const FlyingBirds = () => (
   <>
     <motion.img
-      src="/assets/graphics/bird.svg"
+      src={`${import.meta.env.BASE_URL}assets/graphics/bird.svg`}
       alt="Flying Bird"
       className="flying-bird"
       style={{ position: "absolute", top: "25%", width: "80px" }}
@@ -22,7 +22,7 @@ const FlyingBirds = () => (
       transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
     />
     <motion.img
-      src="/assets/graphics/bird.svg"
+      src={`${import.meta.env.BASE_URL}assets/graphics/bird.svg`}
       alt="Flying Bird 2"
       className="flying-bird"
       style={{ position: "absolute", top: "75%", width: "60px" }}
@@ -36,7 +36,8 @@ const FlyingBirds = () => (
 );
 
 const getBackgroundClass = (currentScreen, selectedChapter) => {
-  if (["map", "path-selection"].includes(currentScreen)) return "sea-background";
+  if (["map", "path-selection"].includes(currentScreen))
+    return "sea-background";
   return selectedChapter === 0 || selectedChapter === null
     ? "mount-background"
     : "palm-background";
@@ -51,7 +52,10 @@ const App = () => {
   const [completedChapters, setCompletedChapters] = useState([]);
 
   useEffect(() => {
-    document.body.className = getBackgroundClass(currentScreen, selectedChapter);
+    document.body.className = getBackgroundClass(
+      currentScreen,
+      selectedChapter
+    );
   }, [currentScreen, selectedChapter]);
 
   const handleNextScreen = () => {
@@ -97,7 +101,9 @@ const App = () => {
           onClick={() => setShowCredits(true)}
         >
           <img
-            src="/assets/graphics/front-view-boat.svg"
+            src={`${
+              import.meta.env.BASE_URL
+            }assets/graphics/front-view-boat.svg`}
             className="credit-boat-img"
             alt="credit-boat"
           />
@@ -146,7 +152,9 @@ const App = () => {
         selectedChapter > 1 &&
         currentScreen === "chapter" && (
           <img
-            src={`/assets/graphics/flags/flag${selectedChapter}.svg`}
+            src={`${
+              import.meta.env.BASE_URL
+            }assets/graphics/flags/flag${selectedChapter}.svg`}
             className="flag"
             alt={`Flag ${selectedChapter}`}
           />
