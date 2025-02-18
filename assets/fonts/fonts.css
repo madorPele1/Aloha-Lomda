@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "OmriNivFireshtein";
+    src: url("/assets/fonts/OhOmriNivFireshtein-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/assets/fonts/Rubik-Medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/Rubik-Bold.ttf") format("truetype");
+  }
+  
