@@ -347,9 +347,9 @@
           "text": "לאחר הזנת נתוני ברירת המחדל, יש לבחור את סוג המקור עד ידי כניסה למסך הראשי  SetUp ולבחור Direct",
           "image": "./assets/graphics/chapters/chapter2/direct1.png",
           "clickableAreas": [
-            { "x": 210, "y": 70, "width": 50, "height": 30, "delay": 1000 },
-            { "x": 170, "y": 200, "width": 50, "height": 30, "delay": 1300 },
-            { "x": 410, "y": 200, "width": 50, "height": 30, "delay": 1600 }
+            { "x": 210, "y": 30, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 170, "y": 90, "width": 50, "height": 30, "delay": 1300 },
+            { "x": 410, "y": 100, "width": 50, "height": 30, "delay": 1600 }
           ]
         },
         {
@@ -370,7 +370,6 @@
           "clickableAreas": [
             { "x": 40, "y": 170, "width": 10, "height": 10, "delay": 1000 },
             { "x": 180, "y": 370, "width": 10, "height": 10, "delay": 1300 }
-            
           ]
         },
         {
@@ -381,7 +380,6 @@
             { "x": 110, "y": 100, "width": 10, "height": 10, "delay": 1000 },
             { "x": 140, "y": 235, "width": 10, "height": 10, "delay": 1300 },
             { "x": 180, "y": 390, "width": 10, "height": 10, "delay": 1600 }
-            
           ]
         },
         {
@@ -422,7 +420,8 @@
           "text": "סיימתם ללמוד על תרחיש DIRECT! לחצו על סמל התרחיש כדי ללמוד על שאר סוגי התרחישים:",
           "image": "",
           "subject": {
-              "endSubject": "true"
+            "subject": "./assets/graphics/subjects/direct.svg",
+            "endSubject": "true"
           }
         },
         {
@@ -434,37 +433,69 @@
         {
           "title": "בחירת סוג המקור - Tank​",
           "text": "לבחירת סוג המקור יש להכנס למסך הראשי SetUp ולבחור Tank",
-          "image": "./assets/graphics/chapters/chapter2/tank1.png"
+          "image": "./assets/graphics/chapters/chapter2/tank1.png",
+          "clickableAreas": [
+            { "x": 220, "y": 80, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 220, "y": 220, "width": 50, "height": 30, "delay": 1300 },
+            { "x": 370, "y": 320, "width": 50, "height": 30, "delay": 1600 }
+          ]
         },
         {
           "title": "הזנת נתונים (גודל המיכל, נפח וצורה)​",
           "text": "בתרחיש זה חייבים להזין את נתוני המכלים. מספיקה הזנה של שני ערכים בלבד על מנת שהתוכנה תחשב את הערך השלישי",
-          "image": "./assets/graphics/chapters/chapter2/tank2.png"
+          "image": "./assets/graphics/chapters/chapter2/tank2.png",
+          "clickableAreas": [
+            { "x": 290, "y": 220, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 500, "y": 290, "width": 50, "height": 30, "delay": 1300 },
+            { "x": 450, "y": 340, "width": 50, "height": 30, "delay": 1600 },
+            { "x": 150, "y": 400, "width": 50, "height": 30, "delay": 1900 }
+          ]
         },
         {
           "title": "הזנת נתונים (מצב צבירה וטמפרטורה)​",
           "text": "הנתונים המוזנים בחלק הזה הם נתוני ברירת מחדל, במידה וקיים מידע אחר על טמפ' המיכל, יש לשנות את ערך ברירת המחדל. להמשך לחץ OK",
-          "image": "./assets/graphics/chapters/chapter2/tank3.png"
+          "image": "./assets/graphics/chapters/chapter2/tank3.png",
+          "clickableAreas": [
+            { "x": 50, "y": 80, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 250, "y": 300, "width": 50, "height": 30, "delay": 1300 },
+            { "x": 220, "y": 390, "width": 50, "height": 30, "delay": 1600 }
+          ]
         },
         {
           "title": "הזנת נתונים (אחוז נפחי של החומר במיכל)​",
           "text": "יש לוודא שכמות החומר אינה חורגת מנפח המיכל - משמע, אינה עולה מעל 100%)",
-          "image": "./assets/graphics/chapters/chapter2/tank4.png"
+          "image": "./assets/graphics/chapters/chapter2/tank4.png",
+          "clickableAreas": [
+            { "x": 350, "y": 150, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 160, "y": 360, "width": 50, "height": 30, "delay": 1300 }
+          ]
         },
         {
           "title": "הזנת נתונים (מיקום הפגיעה במיכל)​",
           "text": "נבחר באפשרות ראשונה ונלחץ OK",
-          "image": "./assets/graphics/chapters/chapter2/tank5.png"
+          "image": "./assets/graphics/chapters/chapter2/tank5.png",
+          "clickableAreas": [
+            { "x": 50, "y": 130, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 160, "y": 680, "width": 50, "height": 30, "delay": 1300 }
+          ]
         },
         {
           "title": "הזנת נתונים (צורה וגודל נקודת הפגיעה)​",
           "text": "בעמוד זה יש להזין את צורת נקודת הפגיעה/כשל ולהזין 5 ס\"מ בגודל. להמשך לחץ OK",
-          "image": "./assets/graphics/chapters/chapter2/tank6.png"
+          "image": "./assets/graphics/chapters/chapter2/tank6.png",
+          "clickableAreas": [
+            { "x": 230, "y": 230, "width": 50, "height": 30, "delay": 1000 },
+            { "x": 150, "y": 380, "width": 50, "height": 30, "delay": 1300 }
+          ]
         },
         {
           "title": "הזנת נתונים (מרחק נקודת הכשל ביחס לכמות במיכל)​",
           "text": "בתרחיש מחמיר נניח פגיעה בתחתית המיכל, משמע בגובה 0. לאחר הזנת הנתונים נלחץ OK להמשך",
-          "image": "./assets/graphics/chapters/chapter2/tank7.png"
+          "image": "./assets/graphics/chapters/chapter2/tank7.png",
+          "clickableAreas": [
+            { "x": 290, "y": 140, "width": 10, "height": 10, "delay": 1000 },
+            { "x": 150, "y": 180, "width": 10, "height": 10, "delay": 1300 }
+          ]
         },
         {
           "title": "TANK",
@@ -562,7 +593,7 @@
         },
         {
           "title": "הזנת נתוני חומר לצורך חישוב הע\"ס בתוכנה​",
-          "text": "חר בבחירה הראשונה Toxic of vaper cloud. ולאחר מכן OK להמשך",
+          "text": "נבחר בבחירה הראשונה Toxic of vaper cloud. ולאחר מכן OK להמשך",
           "image": "./assets/graphics/chapters/chapter2/puddle7.png"
         },
         {

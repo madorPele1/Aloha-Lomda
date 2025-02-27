@@ -34,8 +34,10 @@ const Character = ({
       >
         {clickableAreas && (
           <img
-          src={`${import.meta.env.BASE_URL}assets/graphics/icons/computer-icon.svg`}
-          className="computer-icon"
+            src={`${
+              import.meta.env.BASE_URL
+            }assets/graphics/icons/computer-icon.svg`}
+            className="computer-icon"
             alt="computer-icon"
           />
         )}
@@ -98,7 +100,10 @@ const Character = ({
               <li
                 key={index}
                 className="bullet-point"
-                style={{ fontSize: "0.9rem", marginRight: `${(index + 1) * 3}%` }} // Increasing margin
+                style={{
+                  fontSize: "0.9rem",
+                  marginRight: `${(index + 1) * 3}%`,
+                }} // Increasing margin
               >
                 {bulletPoint}
               </li>
@@ -107,14 +112,13 @@ const Character = ({
         )}
 
         {question && <Question question={question} onAnswered={onAnswered} />}
-
         <button
           className="back-to-subjects-btn"
           onClick={() => onSubjectSelect(1)}
-          style={{ display: endSubject === "true" ? "flex" : "none" }}
+          style={{ display: subject?.endSubject === "true" ? "flex" : "none" }}
         >
           <img
-              src={`${import.meta.env.BASE_URL}${subject?.subject}`}
+            src={`${import.meta.env.BASE_URL}${subject?.subject}`}
             alt="subject-img-btn"
             style={{ width: "13vh" }}
           />
@@ -130,6 +134,7 @@ const Character = ({
           }-${
             selectedChapter && selectedChapter % 2 !== 0 ? "man" : "woman"
           }-soldier.svg`}
+          style={{maxWidth: "32vw"}}
           alt="Character"
         />
       )}

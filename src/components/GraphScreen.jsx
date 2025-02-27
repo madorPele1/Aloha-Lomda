@@ -92,7 +92,7 @@ const GraphScreen = ({ graph }) => {
     <div
       style={{
         maxWidth: "400px",
-        height: "300px",
+        height: "30%",
         margin: "0 auto",
         textAlign: "center",
       }}
@@ -102,6 +102,7 @@ const GraphScreen = ({ graph }) => {
         data={data}
         options={{
           maintainAspectRatio: false,
+          responsive: true,
           scales: {
             y: {
               grid: {

@@ -36,8 +36,7 @@ const FlyingBirds = () => (
 );
 
 const getBackgroundClass = (currentScreen, selectedChapter) => {
-  if (["map", "path-selection"].includes(currentScreen))
-    return "sea-background";
+  if (["map", "pathSelection"].includes(currentScreen)) return "sea-background";
   return selectedChapter === 0 || selectedChapter === null
     ? "mount-background"
     : "palm-background";
@@ -65,9 +64,17 @@ const App = () => {
     if (screenIndex < currentChapter.screens.length - 1) {
       setScreenIndex((prev) => prev + 1);
     } else {
-      setCurrentScreen("map");
-      setSelectedChapter(null);
-      setScreenIndex(0);
+      if (selectedChapter === 0) {
+        // If the instructions are completed, move to path selection
+        setCurrentScreen("pathSelection");
+        setSelectedChapter(null);
+        setScreenIndex(0);
+      } else {
+        // Otherwise, return to the map
+        setCurrentScreen("map");
+        setSelectedChapter(null);
+        setScreenIndex(0);
+      }
     }
   };
 
@@ -90,9 +97,11 @@ const App = () => {
   const screens = {
     opening: (
       <div className="app">
-        <h1 className="main-title">
-          לומדת <br /> <span style={{ color: "#FA5B60" }}>הערכת סיכונים</span>
-        </h1>
+        <img
+          src={`${import.meta.env.BASE_URL}assets/fonts/main-title.svg`}
+          alt="main-title"
+          style={{ width: "45vh", display: "block" }}
+        />
         <button onClick={() => handleChapterSelect(0)} className="button">
           התחל
         </button>
@@ -111,7 +120,7 @@ const App = () => {
         <FlyingBirds />
       </div>
     ),
-    "path-selection": (
+    pathSelection: (
       <PathSelection
         onSelectPath={(mode) => {
           setPathMode(mode);
@@ -131,6 +140,7 @@ const App = () => {
       <ExplanationScreen
         {...chaptersData.chapters[selectedChapter].screens[screenIndex]}
         chapter={chaptersData.chapters[selectedChapter].title}
+        id={chaptersData.chapters[selectedChapter].id}
         screenIndex={screenIndex}
         selectedChapter={selectedChapter}
         onSubjectSelect={setScreenIndex}
@@ -149,7 +159,7 @@ const App = () => {
       {screens[currentScreen]}
       {showCredits && <Credits onClose={() => setShowCredits(false)} />}
       {selectedChapter !== null &&
-        selectedChapter > 1 &&
+        selectedChapter >= 1 &&
         currentScreen === "chapter" && (
           <img
             src={`${

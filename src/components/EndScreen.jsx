@@ -14,7 +14,12 @@ const EndScreen = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      style={{ overflow: "hidden", position: "relative", width: "100vw", height: "100vh" }} // Ensure birds stay within bounds
+      style={{
+        overflow: "hidden",
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+      }} // Ensure birds stay within bounds
     >
       {/* Title */}
       <motion.h1
@@ -23,7 +28,8 @@ const EndScreen = () => {
         transition={{ duration: 1 }}
         style={{ color: "#FA5B60", fontSize: "4rem", marginBottom: "8%" }}
       >
-        לומדת<br /> הערכת סיכונים
+        לומדת
+        <br /> הערכת סיכונים
       </motion.h1>
 
       {showCredits && <Credits onClose={() => setShowCredits(false)} />}
@@ -73,13 +79,17 @@ const EndScreen = () => {
         }}
       >
         <img src={womanSoldier} alt="woman Soldier" style={{ width: "13vh" }} />
-        <img src={manSoldier} alt="man Soldier" style={{ width: "13vh", transform: "scaleX(-1)" }} />
+        <img
+          src={manSoldier}
+          alt="man Soldier"
+          style={{ width: "13vh", transform: "scaleX(-1)" }}
+        />
       </motion.div>
 
       {/* Credits Boat Button */}
       <button className="credit-boat-btn" onClick={() => setShowCredits(true)}>
         <img
-          src="src/assets/graphics/front-view-boat.svg"
+          src={`${import.meta.env.BASE_URL}assets/graphics/front-view-boat.svg`}
           className="credit-boat-img"
           alt="credit-boat"
         />
@@ -94,7 +104,7 @@ const EndScreen = () => {
           position: "absolute",
           top: "15%",
           width: "80px",
-          left: "0%"
+          left: "0%",
         }}
         animate={{
           x: ["-20vw", "120vw", "-20vw"], // Fully exits screen
@@ -116,7 +126,7 @@ const EndScreen = () => {
           position: "absolute",
           top: "50%",
           width: "60px",
-          left: "0%"
+          left: "0%",
         }}
         animate={{
           x: ["120vw", "-20vw", "120vw"], // Fully exits screen

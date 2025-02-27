@@ -5,6 +5,7 @@ import Character from "./Character";
 const ExplanationScreen = ({
   chapter,
   title,
+  id,
   text,
   image,
   buttons,
@@ -85,31 +86,43 @@ const ExplanationScreen = ({
           >
             <img
               style={{ width: "30px" }}
-              src={`${import.meta.env.BASE_URL}assets/graphics/icons/hamburger-menu.svg`}
+              src={`${
+                import.meta.env.BASE_URL
+              }assets/graphics/icons/hamburger-menu.svg`}
               alt="hamburger-menu"
             />
           </button>
-          <h1>{chapter}</h1>
+          <img
+            src={`${import.meta.env.BASE_URL}assets/fonts/chapter${id}.svg`}
+            alt="chapter-title"
+            style={{ width: "78vw" }}
+          />
         </div>
 
         <div className={`opened-navbar ${isMenuOpen ? "visible" : ""}`}>
           <button className="sound-btn" disabled={isAudioPlaying}>
             <img
-              src={`${import.meta.env.BASE_URL}assets/graphics/icons/sound-icon.svg`} 
+              src={`${
+                import.meta.env.BASE_URL
+              }assets/graphics/icons/sound-icon.svg`}
               alt="sound-icon"
             />
             {isAudioPlaying ? "Playing..." : "השמעה חוזרת"}
           </button>
           <button className="back-to-map-btn" onClick={onBackToMap}>
             <img
-              src={`${import.meta.env.BASE_URL}assets/graphics/icons/back-to-map-icon.svg`} 
+              src={`${
+                import.meta.env.BASE_URL
+              }assets/graphics/icons/back-to-map-icon.svg`}
               alt="back-to-map"
             />
             חזרה למפה
           </button>
           <button className="skip-btn" onClick={handleSkipAudio}>
             <img
-              src={`${import.meta.env.BASE_URL}assets/graphics/icons/skip-icon.svg`} 
+              src={`${
+                import.meta.env.BASE_URL
+              }assets/graphics/icons/skip-icon.svg`}
               alt="skip-icon"
             />
             מצב מפתחים
@@ -136,10 +149,13 @@ const ExplanationScreen = ({
                 onClick={() => handleSubjectSelect(button.firstScreen)}
               >
                 {button.label}
-                <p style={{ fontFamily: "rubik", fontWeight: "400" }}>
+                <p style={{ fontWeight: "400" }}>
                   {button.subLabel}
                 </p>
-                <img src={`${import.meta.env.BASE_URL}${button.subject}`} alt={`${button.label}-img`} />
+                <img
+                  src={`${import.meta.env.BASE_URL}${button.subject}`}
+                  alt={`${button.label}-img`}
+                />
               </button>
             ))}
           </div>

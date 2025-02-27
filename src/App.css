@@ -10,7 +10,7 @@
 
 body {
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100svh;
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -42,7 +42,7 @@ body.palm-background {
   box-shadow: #ffe699 6px -5px;
   transition: box-shadow 0.25s;
   cursor: pointer;
-  font-family: rubik;
+  font-family: Rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.2em;
   color: #fa5b60;
   font-weight: 900;
@@ -54,10 +54,6 @@ body.palm-background {
 .button:focus,
 .button:focus-visible {
   box-shadow: #ffe699 3px -2px;
-}
-
-.main-title {
-  font-family: OmriNivFireshtein;
 }
 
 /* opening */
@@ -138,6 +134,7 @@ body.palm-background {
 .character-text {
   text-wrap: wrap;
   margin: auto;
+  font-size: 3.5vw;
 }
 
 .explanation-div {
@@ -254,10 +251,14 @@ li {
 
 /* ExplanationScreen */
 .explanation-screen {
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   align-content: center;
   background-color: #ffffff80;
+  overflow: hidden;
+  position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .continue-btn, .back-btn {
@@ -270,14 +271,19 @@ li {
 
 
 .navbar {
+  position: absolute; /* Default position */
+  top: 0;
+  right: 0;
+  left: 0; /* Ensures full width */
   background-color: #f8f8f8;
   box-shadow: #808080a3 0px 2px 15px 3px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
   font-size: 6px;
-  z-index: 1;
+  z-index: 1000; /* Ensure it stays above */
+}
+
+.navbar.fixed {
+  position: fixed;
 }
 
 .fixed-navbar {
@@ -306,6 +312,7 @@ li {
 .explanation-title {
   font-size: 1.4rem;
   margin: auto;
+  line-height: 30px;
 }
 
 /* Map */
@@ -417,6 +424,11 @@ li {
 .back-to-subjects-btn {
   flex-direction: column;
   margin: auto;
+}
+
+.button-screen {
+  max-height: 100vh; /* Prevents it from growing too much */
+  overflow-y: auto; /* Adds scrolling inside instead of page growing */
 }
 
 .button-screen h2 {
