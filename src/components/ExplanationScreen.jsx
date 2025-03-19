@@ -11,6 +11,7 @@ const ExplanationScreen = ({
   buttons,
   onSubjectSelect,
   onContinue,
+  isLoading,
   onBack,
   onBackToMap,
   graph,
@@ -25,13 +26,39 @@ const ExplanationScreen = ({
 }) => {
   const audioSrc = `${
     import.meta.env.BASE_URL
-  }assets/audio/chapters/chapter${selectedChapter}/${screenIndex + 1}.m4a`;
+  }assets/audio/chapters/chapter${selectedChapter}/${screenIndex + 1}.wav`;
   const [play, { stop, sound }] = useSound(audioSrc);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isDeveloperMode, setIsDeveloperMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isQuestionAnswered, setIsQuestionAnswered] = useState(!question);
   const [completedTopics, setCompletedTopics] = useState([]);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const imageElements = document.querySelectorAll(".explanation-screen img");
+    let loadedCount = 0;
+  
+    if (imageElements.length === 0) {
+      setImagesLoaded(true); // No images to load, mark as loaded
+      return;
+    }
+  
+    imageElements.forEach((img) => {
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === imageElements.length) {
+          setImagesLoaded(true);
+        }
+      };
+      img.onerror = () => {
+        loadedCount++; // Consider it loaded even if it fails
+        if (loadedCount === imageElements.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, [screenIndex]); // Run every time the screen changes
 
   useEffect(() => {
     if (sound) {
@@ -53,7 +80,7 @@ const ExplanationScreen = ({
   const handleSkipAudio = () => {
     if (
       isDeveloperMode ||
-      prompt("הזינו סיסמא על מנת להפעיל מצב מפתחים") === "devpass"
+      prompt("הזינו סיסמא על מנת להפעיל מצב מפתחים") === "1"
     ) {
       stop();
       setIsAudioPlaying(false);
@@ -74,7 +101,7 @@ const ExplanationScreen = ({
   const allTopicsCompleted =
     buttons && completedTopics.length === buttons.length;
   const isContinueDisabled =
-    isAudioPlaying || (!isQuestionAnswered && question);
+    isAudioPlaying || (!isQuestionAnswered && question) || isLoading;
 
   return (
     <div className="explanation-screen">
@@ -149,9 +176,7 @@ const ExplanationScreen = ({
                 onClick={() => handleSubjectSelect(button.firstScreen)}
               >
                 {button.label}
-                <p style={{ fontWeight: "400" }}>
-                  {button.subLabel}
-                </p>
+                <p style={{ fontWeight: "400" }}>{button.subLabel}</p>
                 <img
                   src={`${import.meta.env.BASE_URL}${button.subject}`}
                   alt={`${button.label}-img`}

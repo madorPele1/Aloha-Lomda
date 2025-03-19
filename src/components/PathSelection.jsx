@@ -8,7 +8,7 @@ const PathSelection = ({ onSelectPath }) => (
       <div className="selection-container">
         <img
           className="selection-boat"
-          src={`${import.meta.env.BASE_URL}assets/graphics/front-view-boat.svg`}
+          src={`${import.meta.env.BASE_URL}assets/graphics/path-boat.svg`}
           alt="selection-boat"
         />
         <button className="button" onClick={() => onSelectPath("structured")}>

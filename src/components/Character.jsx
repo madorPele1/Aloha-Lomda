@@ -27,8 +27,7 @@ const Character = ({
       <div
         className="explanation-div"
         style={{
-          top: graph ? "2vh" : "",
-          height: graph ? "80vh" : "",
+          height: graph ? "73vh" : "",
           display: !graph ? "flex" : "",
         }}
       >
@@ -132,7 +131,7 @@ const Character = ({
           src={`${import.meta.env.BASE_URL}assets/graphics/soldiers/${
             image ? "explain" : question ? "question" : "standing"
           }-${
-            selectedChapter && selectedChapter % 2 !== 0 ? "man" : "woman"
+            selectedChapter && selectedChapter == 1 ? "man" : "woman"
           }-soldier.svg`}
           style={{maxWidth: "32vw"}}
           alt="Character"

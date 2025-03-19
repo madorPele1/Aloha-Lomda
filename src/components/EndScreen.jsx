@@ -18,19 +18,18 @@ const EndScreen = () => {
         overflow: "hidden",
         position: "relative",
         width: "100vw",
-        height: "100vh",
+        height: "100svh",
       }} // Ensure birds stay within bounds
     >
       {/* Title */}
-      <motion.h1
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/fonts/main-title.svg`}
+        alt="main-title"
+        style={{ width: "45vh", display: "block", marginBottom: "8%" }}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        style={{ color: "#FA5B60", fontSize: "4rem", marginBottom: "8%" }}
-      >
-        לומדת
-        <br /> הערכת סיכונים
-      </motion.h1>
+      />
 
       {showCredits && <Credits onClose={() => setShowCredits(false)} />}
 
@@ -72,7 +71,7 @@ const EndScreen = () => {
         transition={{ duration: 1 }}
         style={{
           position: "absolute",
-          bottom: "20px",
+          bottom: "0",
           right: "0",
           display: "flex",
           alignItems: "baseline",

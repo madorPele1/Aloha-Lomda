@@ -89,6 +89,7 @@ const Map = ({
             </button>
           ))
         : ""}
+        {/* {<p className="refresh-message">במידה וברצונך לבחור מסלול אחר, יש לרענן את העמוד</p>} */}
     </div>
   </div>
   );

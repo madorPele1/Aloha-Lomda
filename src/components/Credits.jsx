@@ -25,9 +25,9 @@ const Credits = ({ onClose }) => {
           <li>
             <b>קריינות:</b>אולפן שידור
           </li>
-          <li>
+          <li >
             {" "}
-            <b>פונט הכותרות: </b> אתר אות.חיים, כתב ידו של עומרי ניב פיירשטיין
+            <b>פונט הכותרות: </b> אתר אות.חיים,<br/> <span style={{marginRight: "30px"}} >כתב ידו של עומרי ניב פיירשטיין</span>
           </li>
           <a href="https://www.ot-hayim.co.il/fonts/omri-niv-fireshtein/">
             בקרו בקישור על מנת ללמוד על סיפור חייו
