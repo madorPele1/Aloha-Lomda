@@ -36,31 +36,6 @@ const ExplanationScreen = ({
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    const imageElements = document.querySelectorAll(".explanation-screen img");
-    let loadedCount = 0;
-  
-    if (imageElements.length === 0) {
-      setImagesLoaded(true); // No images to load, mark as loaded
-      return;
-    }
-  
-    imageElements.forEach((img) => {
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === imageElements.length) {
-          setImagesLoaded(true);
-        }
-      };
-      img.onerror = () => {
-        loadedCount++; // Consider it loaded even if it fails
-        if (loadedCount === imageElements.length) {
-          setImagesLoaded(true);
-        }
-      };
-    });
-  }, [screenIndex]); // Run every time the screen changes
-
-  useEffect(() => {
     if (sound) {
       play();
       setIsAudioPlaying(true);
@@ -75,7 +50,9 @@ const ExplanationScreen = ({
     };
   }, [sound]);
 
-  useEffect(() => setIsQuestionAnswered(!question), [question]);
+  useEffect(() => {
+    setIsQuestionAnswered(!question);
+  }, [question]);
 
   const handleSkipAudio = () => {
     if (
