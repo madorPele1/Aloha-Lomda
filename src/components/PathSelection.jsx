@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import useSound from "use-sound";
 
 const PathSelection = ({ onSelectPath }) => {
-  const audioSrc = `${import.meta.env.BASE_URL}assets/audio/chapters/chapter0/3.wav`;
+  const audioSrc = `${
+    import.meta.env.BASE_URL
+  }assets/audio/chapters/chapter0/3.wav`;
   const [play, { stop }] = useSound(audioSrc, { volume: 1 });
 
   useEffect(() => {
@@ -28,8 +30,11 @@ const PathSelection = ({ onSelectPath }) => {
           </button>
           <div className="selection-explanation selection-explanation-div">
             <span>
-              מסלול מובנה המותאם למשתמש שרוצה ללמוד את התוכנה על כלל אפשרויותיה
+              <b>מסלול מובנה</b> <br />
+              המותאם למשתמש שרוצה ללמוד את התוכנה על כלל אפשרויותיה
             </span>
+
+            <span></span>
           </div>
         </div>
         <div className="selection-container">
@@ -48,7 +53,10 @@ const PathSelection = ({ onSelectPath }) => {
             צלילה חופשית
           </button>
           <div className="selection-explanation selection-explanation-div">
-            <span>מסלול רענון המאפשר לבחור בכל פעם בנושא אחר באופן חופשי</span>
+            <span>
+              <b>מסלול רענון</b> <br /> המאפשר לבחור בכל פעם בנושא אחר באופן
+              חופשי
+            </span>
           </div>
         </div>
       </div>

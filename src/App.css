@@ -220,12 +220,12 @@ li {
 
 .area-description p {
   font-size: 14px;
-  margin: 0;
+  margin: 25px 0px 0px 0px;
 }
 
 .close-btn {
   position: absolute;
-  top: 5px;
+  top: 2px;
   right: 5px;
   background: none;
   border: none;
@@ -339,7 +339,7 @@ li {
 }
 
 .island1 {
-  top: 48%;
+  top: 43%;
   right: -4%;
 }
 .island2 {
@@ -355,7 +355,7 @@ li {
   right: -3%;
 }
 .island5 {
-  top: 19%;
+  top: 13%;
   right: 11%;
 }
 

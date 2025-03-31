@@ -28,7 +28,7 @@ const FlyingBirds = () => (
       src={bird}
       alt="Flying Bird 2"
       className="flying-bird"
-      style={{ position: "absolute", top: "50%", width: "60px", left: "0%" }}
+      style={{ position: "absolute", top: "70%", width: "60px", left: "0%" }}
       animate={{
         x: ["120vw", "-20vw", "120vw"],
         scaleX: [-1, -1, -1, 1, 1, 1],
