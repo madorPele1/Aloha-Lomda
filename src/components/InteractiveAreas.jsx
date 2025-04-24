@@ -31,8 +31,9 @@ const InteractiveAreas = ({ image, interactiveAreas, clickableAreas }) => {
             className="interactive-tag"
             style={{
               position: "absolute",
-              top: `${15 + index * 40}%`, // Example positioning
-              left: `${30 + index * 20}%`,
+              top: `${55 + index * -40}%`,
+              left: `${55 + index * -25}%`,
+              backgroundColor: index === 1 ? "red" : ""
             }}
             onClick={() => handleTagClick(index)}
           >

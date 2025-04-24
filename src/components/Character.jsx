@@ -18,9 +18,10 @@ const Character = ({
   video,
   selectedChapter,
   clickableAreas,
+  paddingRight
 }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const textStyle = image ? { paddingRight: "10vh" } : {};
+  const textStyle = image && !paddingRight ? { paddingRight: "7vh" } : {};
 
   return (
     <div className="character">
@@ -100,7 +101,7 @@ const Character = ({
                 key={index}
                 className="bullet-point"
                 style={{
-                  fontSize: "0.9rem",
+                  fontSize: "0.7rem",
                   marginRight: `${(index + 1) * 3}%`,
                 }} // Increasing margin
               >
@@ -114,14 +115,17 @@ const Character = ({
         <button
           className="back-to-subjects-btn"
           onClick={() => onSubjectSelect(1)}
-          style={{ display: subject?.endSubject === "true" ? "flex" : "none" }}
+          style={{
+            fontWeight: "bold",
+            display: subject?.endSubject === "true" ? "flex" : "none",
+          }}
         >
           <img
             src={`${import.meta.env.BASE_URL}${subject?.subject}`}
             alt="subject-img-btn"
-            style={{ width: "13vh" }}
+            style={{ width: "8vh" }}
           />
-          חזרה לבחירת נושא
+          <p style={{ position: "absolute", bottom: "0" }}>חזרה לבחירת תרחיש</p>
         </button>
       </div>
 
@@ -133,7 +137,7 @@ const Character = ({
           }-${
             selectedChapter && selectedChapter == 1 ? "man" : "woman"
           }-soldier.svg`}
-          style={{maxWidth: "32vw"}}
+          style={{ maxWidth: "32vw" }}
           alt="Character"
         />
       )}

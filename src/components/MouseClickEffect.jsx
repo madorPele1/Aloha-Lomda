@@ -58,6 +58,11 @@ const MouseClickEffect = ({ clickableAreas, imageRef }) => {
     return () => clearTimeout(moveTimeout);
   }, [clickIndex, clickableAreas, imageSize]);
 
+  // Do not render the mouse if clickableAreas is empty
+  if (!clickableAreas?.length) {
+    return null;
+  }
+
   return (
     <motion.div
       className="virtual-mouse"

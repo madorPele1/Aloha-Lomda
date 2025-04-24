@@ -22,7 +22,12 @@ const FlyingBirds = () => (
         x: ["-20vw", "120vw", "-20vw"],
         scaleX: [1, 1, 1, -1, -1, -1],
       }}
-      transition={{ repeat: Infinity, duration: 6, ease: "linear", times: [0, 0.48, 0.49, 0.51, 0.52, 1] }}
+      transition={{
+        repeat: Infinity,
+        duration: 6,
+        ease: "linear",
+        times: [0, 0.48, 0.49, 0.51, 0.52, 1],
+      }}
     />
     <motion.img
       src={bird}
@@ -33,14 +38,21 @@ const FlyingBirds = () => (
         x: ["120vw", "-20vw", "120vw"],
         scaleX: [-1, -1, -1, 1, 1, 1],
       }}
-      transition={{ repeat: Infinity, duration: 8, ease: "linear", times: [0, 0.48, 0.49, 0.51, 0.52, 1] }}
+      transition={{
+        repeat: Infinity,
+        duration: 8,
+        ease: "linear",
+        times: [0, 0.48, 0.49, 0.51, 0.52, 1],
+      }}
     />
   </>
 );
 
 const getBackgroundClass = (currentScreen, selectedChapter) => {
   if (["map", "pathSelection"].includes(currentScreen)) return "sea-background";
-  return selectedChapter === 0 || selectedChapter === null ? "mount-background" : "palm-background";
+  return selectedChapter === 0 || selectedChapter === null
+    ? "mount-background"
+    : "palm-background";
 };
 
 const App = () => {
@@ -53,14 +65,20 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    document.body.className = getBackgroundClass(currentScreen, selectedChapter);
+    document.body.className = getBackgroundClass(
+      currentScreen,
+      selectedChapter
+    );
   }, [currentScreen, selectedChapter]);
 
   const handleNextScreen = () => {
     if (selectedChapter === null || isLoading) return;
     setIsLoading(true);
     setTimeout(() => {
-      if (screenIndex < chaptersData.chapters[selectedChapter].screens.length - 1) {
+      if (
+        screenIndex <
+        chaptersData.chapters[selectedChapter].screens.length - 1
+      ) {
         setScreenIndex((prev) => prev + 1);
       } else {
         setCurrentScreen("map");
@@ -84,7 +102,9 @@ const App = () => {
   };
 
   const handleChapterComplete = (chapterId) => {
-    setCompletedChapters((prev) => (prev.includes(chapterId) ? prev : [...prev, chapterId]));
+    setCompletedChapters((prev) =>
+      prev.includes(chapterId) ? prev : [...prev, chapterId]
+    );
   };
 
   const screens = {
@@ -95,10 +115,20 @@ const App = () => {
           alt="main-title"
           style={{ width: "45vh", display: "block" }}
         />
-        <button onClick={() => setCurrentScreen("introduction")} className="button">התחל</button>
-        <button className="credit-boat-btn" onClick={() => setShowCredits(true)}>
+        <button
+          onClick={() => setCurrentScreen("introduction")}
+          className="button"
+        >
+          התחל
+        </button>
+        <button
+          className="credit-boat-btn"
+          onClick={() => setShowCredits(true)}
+        >
           <img
-            src={`${import.meta.env.BASE_URL}assets/graphics/front-view-boat.png`}
+            src={`${
+              import.meta.env.BASE_URL
+            }assets/graphics/front-view-boat.png`}
             className="credit-boat-img"
             alt="credit-boat"
           />
@@ -123,9 +153,11 @@ const App = () => {
             setScreenIndex(0);
           }
         }}
-        onBack={screenIndex > 0 ? () => setScreenIndex((prev) => prev - 1) : undefined}
+        onBack={
+          screenIndex > 0 ? () => setScreenIndex((prev) => prev - 1) : undefined
+        }
       />
-    ),    
+    ),
 
     pathSelection: (
       <PathSelection
@@ -153,6 +185,7 @@ const App = () => {
         onSubjectSelect={setScreenIndex}
         onContinue={handleNextScreen}
         isLoading={isLoading}
+        setIsLoading={setIsLoading}
         onBack={handleBackScreen}
         onBackToMap={() => {
           setCurrentScreen("map");

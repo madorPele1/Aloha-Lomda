@@ -138,7 +138,7 @@ body.palm-background {
 .character-text {
   text-wrap: wrap;
   margin: auto;
-  font-size: 3.5vw;
+  font-size: 3.2vw;
 }
 
 .explanation-div {
@@ -150,7 +150,7 @@ body.palm-background {
   max-width: 75svw;
   margin: 16vh auto;
   position: relative;
-  bottom: 8vh;
+  bottom: 6vh;
   z-index: 0;
   flex-direction: column;
   align-items: center;
@@ -441,6 +441,15 @@ li {
 .back-to-subjects-btn {
   flex-direction: column;
   margin: auto;
+  font-weight: bold;
+  display: flex;
+  border-radius: 50%;
+  background: #e2f1f3;
+  align-items: center;
+  padding: 30px;
+  font-family: Rubik;
+  margin: 15px;
+  box-shadow: #00000038 0px 0px 12px 1px;
 }
 
 .button-screen {
@@ -526,7 +535,7 @@ li {
 }
 
 .question-text {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin: 0px 0px 10px 0px;
 }
 
@@ -541,10 +550,25 @@ li {
   text-align: center;
 }
 
-.check-answer-btn {
-  margin-top: 10%;
+.puddle-input {
+  width: 10%;
+  height: 2vh;
+  text-align: center;
 }
 
+.equation-divider {
+  margin: -10px;
+}
+
+.check-answer-btn {
+  padding: 10px;
+  background-color: #cee1e3;
+  box-shadow: #abc1c3 6px -5px;
+  color: #96adaf;
+}
+.check-answer-btn:focus {
+  box-shadow: #67989e 3px -2px;
+}
 .feedback {
   font-size: 1.2em;
   margin-top: 10px;
@@ -558,6 +582,55 @@ li {
 .incorrect-feedback {
   color: red;
   font-weight: bold;
+}
+
+.multiple-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+}
+
+.mc-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 30px;
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.mc-option.correct {
+  background-color: #e6f9ec;
+  border-color: #4caf50;
+}
+
+.mc-option.incorrect {
+  background-color: #fdecea;
+  border-color: #f44336;
+}
+
+.mc-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-circle.filled::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #4d4d4d;
+  display: block;
 }
 
 /* credits */

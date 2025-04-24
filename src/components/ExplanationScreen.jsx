@@ -12,6 +12,7 @@ const ExplanationScreen = ({
   onSubjectSelect,
   onContinue,
   isLoading,
+  setIsLoading,
   onBack,
   onBackToMap,
   graph,
@@ -23,6 +24,7 @@ const ExplanationScreen = ({
   question,
   video,
   selectedChapter,
+  paddingRight,
 }) => {
   const audioSrc = `${
     import.meta.env.BASE_URL
@@ -62,6 +64,7 @@ const ExplanationScreen = ({
       stop();
       setIsAudioPlaying(false);
       setIsDeveloperMode(true);
+      setIsLoading(false);
       if (!isDeveloperMode) alert("כניסה בוצעה בהצלחה");
     } else {
       alert("סיסמא שגויה");
@@ -77,8 +80,7 @@ const ExplanationScreen = ({
 
   const allTopicsCompleted =
     buttons && completedTopics.length === buttons.length;
-  const isContinueDisabled =
-    isAudioPlaying || (!isQuestionAnswered && question) || isLoading;
+  const isContinueDisabled = (!isQuestionAnswered && question) || isLoading;
 
   return (
     <div className="explanation-screen">
@@ -104,7 +106,14 @@ const ExplanationScreen = ({
         </div>
 
         <div className={`opened-navbar ${isMenuOpen ? "visible" : ""}`}>
-          <button className="sound-btn" disabled={isAudioPlaying}>
+          <button
+            className="sound-btn"
+            disabled={isAudioPlaying}
+            onClick={() => {
+              stop();
+              play();
+            }}
+          >
             <img
               src={`${
                 import.meta.env.BASE_URL
@@ -113,6 +122,7 @@ const ExplanationScreen = ({
             />
             {isAudioPlaying ? "Playing..." : "השמעה חוזרת"}
           </button>
+
           <button className="back-to-map-btn" onClick={onBackToMap}>
             <img
               src={`${
@@ -173,6 +183,7 @@ const ExplanationScreen = ({
             text={text}
             title={title}
             image={image}
+            paddingRight={paddingRight}
             video={video}
             subject={subject}
             buttons={buttons}

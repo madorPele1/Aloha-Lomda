@@ -112,7 +112,7 @@
         },
         {
           "title": "נתונים מטאורולוגים",
-          "text": "בשורת [b]wind speed[/b] הזינו 3 והסימון meter/second. \n בשורת [b]wind is from[/b] הזינו W. \n בשורת [b]Measurment height[/b] הזינו 10 וודאו כי מסומן meters. \n בשורת [b]ground height[/b] ground Roughness הזינו urban or forest. בשורת [b]Cloud cover[/b] הזינו 7. \n נלחץ OK ונתקדם.",
+          "text": "בשורת [b]wind speed[/b] הזינו 3 והסימון meter/second. בשורת [b]wind is from[/b] הזינו W. \n בשורת [b]Measurment height[/b] הזינו 10 וודאו כי מסומן meters. \n בשורת [b]ground height[/b] ground Roughness הזינו urban or forest. בשורת [b]Cloud cover[/b] הזינו 7. נלחץ OK ונתקדם.",
           "image": "./assets/graphics/chapters/chapter1/15.gif",
           "clickableAreas": []
         },
@@ -141,7 +141,7 @@
         },
         {
           "title": "בחירת תרחיש לחישוב",
-          "text": "בחלונית שתיפתח נבחר את האפשרות הראשונה: Toxic of vapor cloud ונלחץ OK.",
+          "text": "בחלונית שתיפתח נבחר את האפשרות הראשונה: Toxic area of vapor cloud ונלחץ OK.",
           "image": "./assets/graphics/chapters/chapter1/20.gif",
           "clickableAreas": []
         },
@@ -154,12 +154,14 @@
         {
           "title": "תוצאת הע\"ס",
           "text": "",
-          "image": "./assets/graphics/chapters/chapter1/22.png"
+          "image": "./assets/graphics/chapters/chapter1/22.png",
+          "paddingRight": true
         },
         {
           "title": "תוצאת הע\"ס",
           "text": "חשוב לשים לב כי רק כאשר הנתונים המטאורולוגיים זמינים נוכל לקבוע את כיוון המניפה.  \n עד אז, נניח שהערכת הסיכונים מעגלית.",
-          "image": "./assets/graphics/chapters/chapter1/225.png"
+          "image": "./assets/graphics/chapters/chapter1/225.png",
+          "paddingRight": true
         },
         {
           "title": "חישוב ריכוז חומר בנקודת הבחינה",
@@ -196,21 +198,25 @@
           "title": "",
           "text": "",
           "question": {
+            "MultipleChoice": true,
             "question": "מה היציבות המתקבלת כברירת מחדל בהצבת הנתונים המטאורולוגיים?",
-            "answer": ["E", "e", "אי"]
+            "options": ["E", "F", "A", "C"],
+            "answer": ["E"]
           }
         },
         {
           "title": "",
           "text": "",
           "question": {
+            "MultipleChoice": true,
             "question": "מהי השעה המוזנת כתרחיש ברירת מחדל למדידת תרחיש ייחוס מחמיר?",
-            "answer": ["23:00", "23"]
+            "options": ["23:00", "22:00", "21:00", "20:00"],
+            "answer": ["23:00"]
           }
         },
         {
-          "title": "",
-          "text": "סיימתם את הפרק הראשון! \nיאללה! נעבור לאי הבא!"
+          "title": "סיימתם את הפרק הראשון בלומדה!",
+          "text": "לחצו על כפתור המשך על מנת לחזור למפה "
         }
       ]
     },
@@ -290,16 +296,18 @@
           "image": "./assets/graphics/chapters/chapter2/direct6.png"
         },
         {
-          "title": "DIRECT שאלה",
+          "title": "",
           "text": "",
           "image": "",
           "question": {
+            "MultipleChoice": true,
             "question": "מה גובה המקור המוזן בבחירת תרחיש זה?",
-            "answer": ["0", "0 מטר", "0 מ'", "10 מטרים"]
+            "options": ["0", "10", "15", "20"],
+            "answer": ["0"]
           }
         },
         {
-          "title": "DIRECT שאלה",
+          "title": "",
           "text": "",
           "image": "",
           "question": {
@@ -370,7 +378,7 @@
           "image": ""
         },
         {
-          "title": "TANK",
+          "title": "",
           "text": "",
           "image": "",
           "graph": {
@@ -379,18 +387,21 @@
             "variables": {
               "מיקום פגיעה": {
                 "sliderValues": [0, 15, 25, 50, 99],
-                "xPositions": [651, 708, 679, 607, 434],
-                "measureUnits": "[%]"
+                "xPositions": [420, 395, 410, 200, 190],
+                "measureUnits": "[%]",
+                "defaultSliderValue": 0
               },
               "טמפ' מיכל": {
                 "sliderValues": [-45, -35, -10, 25, 35],
-                "xPositions": [85, 99, 539, 651, 661],
-                "measureUnits": "[C°]"
+                "xPositions": [140, 150, 400, 420, 450],
+                "measureUnits": "[C°]",
+                "defaultSliderValue": 25
               },
               "קוטר חור": {
-                "sliderValues": [1, 2.5, 5, 10],
-                "xPositions": [152, 312, 317, 317],
-                "measureUnits": "[cm]"
+                "sliderValues": [1, 2.5, 5, 15, 25, 50],
+                "xPositions": [100, 260, 400, 383, 380, 380],
+                "measureUnits": "[cm]",
+                "defaultSliderValue": 5
               }
             }
           }
@@ -400,8 +411,10 @@
           "text": "",
           "image": "",
           "question": {
-            "question": "מנה אחד מנתוני החובה שיש להזין לטובת חישוב תרחיש זה:​",
-            "answer": ["נפח", "קוטר", "אורך"]
+            "MultipleChoice": true,
+            "question": "אילו נתונים נדרשים לטובת חישוב תרחיש TANK?​",
+            "options": ["נפח", "קוטר", "אורך", "נדרשים שניים"],
+            "answer": ["נדרשים שניים"]
           }
         },
         {
@@ -409,8 +422,10 @@
           "text": "",
           "image": "",
           "question": {
-            "question": "מה קוטר החומר המוגדר כקוטר ברירת מחדל בחישוב תרחיש מיכל?​",
-            "answer": ["5", "5סמ", "5 סמ", "5 ס\"מ", "5 סנטימטר", "5 סנטימטרים"]
+            "MultipleChoice": true,
+            "question": "מה קוטר החור המוגדר כקוטר ברירת מחדל בחישוב תרחיש מיכל?​",
+            "options": ["5 מטר", "50 ס\"מ", "5 ס\"מ", "3 מטר"],
+            "answer": ["5 ס\"מ"]
           }
         },
         {
@@ -456,15 +471,16 @@
         {
           "title": "",
           "text": "",
-          "image": "./assets/graphics/chapters/chapter2/puddle35.png",
+          "image": "",
           "question": {
+            "puddleQuestion": true,
             "question": "אריזה במשקל 700 ק\"ג המכילה חומר נוזלי נפגעת כתוצאה מפגיעת רסיס. צפיפות החומר הינה 700 ק\"ג/מ\"ק. נוצר שפך בעובי 10 ס\"מ. חשב את שטח האידוי מהשפך.​",
-            "answer": ["10"]
+            "answer": ["700", "700", "0.1"]
           }
         },
         {
           "title": "הזנת נתוני מימדי השפך​",
-          "text": "נכתוב את שטח השפך שחישבנו, נכתוב את כמות החומר בשפך ונלחץ OK",
+          "text": "נכתוב את שטח השפך שחישבנו, נוסיף את כמות החומר בשפך ונלחץ OK",
           "image": "./assets/graphics/chapters/chapter2/puddle5.gif",
           "clickableAreas": []
         },
@@ -476,7 +492,7 @@
         },
         {
           "title": "הזנת נתוני חומר לצורך חישוב הע\"ס בתוכנה​",
-          "text": "במסך הזה נבחר: Toxic of vapor cloud ונלחץ OK.",
+          "text": "במסך הזה נבחר: Toxic area of vapor cloud ונלחץ OK.",
           "image": "./assets/graphics/chapters/chapter2/puddle7.gif",
           "clickableAreas": []
         },
@@ -499,38 +515,41 @@
           "image": ""
         },
         {
-          "title": "PUDDLE",
+          "title": "",
           "text": "",
           "image": "",
           "graph": {
-            "title": "חישוב שינוי שטח שפך",
+            "title": "הקשר בין שטח השפך להערכת הסיכונים",
             "defaultVariable": "שטח שפך",
             "variables": {
               "שטח שפך": {
-                "sliderValues": [12, 20, 30, 50],
-                "xPositions": [378, 484, 591, 749],
-                "measureUnits": "[m²]"
+                "sliderValues": [32, 80, 160, 320],
+                "xPositions": [604, 920, 1300, 1700],
+                "measureUnits": "[m²]"              
               }
             }
           }
         },
         {
-          "title": "PUDDLE שאלה",
+          "title": "",
           "text": "",
           "image": "",
           "question": {
-            "question": "מה הוא המדד שנדרש לחשב לטובת חישוב תרחיש שפך? (רמז: תלוי בצפיפות החומר)",
-            "answer": ["שטח שלולית"]
+            "MultipleChoice": true,
+            "question": "אילו מדדים נדרשים לטובת חישוב שטח שפך?",
+            "options": ["מסת חומר", "צפיפות חומר", "גובה שלולית", "כל התשובות נכונות"],
+            "answer": ["כל התשובות נכונות"]
           }
         },
         {
-          "title": "PUDDLE שאלה",
+          "title": "",
           "text": "",
           "image": "",
           "question": {
             "question": "אילו נתוני AEGL נלקחים בחישוב תרחיש זה (10 או 60 דק')?​",
             "answer": ["60", "60 דק", "60 דקות", "60 דק'"]
           }
+          
         },
         {
           "title": "PUDDLE",
@@ -563,16 +582,25 @@
         },
         {
           "title": "חשוב להכיר את השיקולים המנחים למתן הנחיות לאוכלוסייה באירוע חומ\"ס",
-          "text": "ההנחיה המיידית הינה הסתגרות!",
+          "text": "\n[b] ההנחיה המיידית הינה הסתגרות![/b]",
+          "bulletPoints": [
+            "אזורי הסיכון וההנחייה לאוכלוסייה נקבעים ע\"פ פק\"ל אופציות נצור לכל מפעל",
+            "בשלב הבא, חמ\"ל הסברה בתיאום עם נציג חומ\"ס יפיץ הנחיות מצילות חיים שתכליתן הסתגרות בחדרים פנימיים",
+            "בהמשך, הערכת סיכונים דינמית תוביל לעדכון ההנחיות לאוכלוסייה שיופצו שוב דרך חמ\"ל הסברה",
+            "כאשר מתקבלות אינדיקציות לסיום האירוע בשטח, ינחה קצין החומ\"ס את חמ\"ל ההסברה להפיץ הודעת סיום הסתגרות"
+          ]
+        },
+        {
+          "title": "חשוב להכיר את השיקולים המנחים למתן הנחיות לאוכלוסייה באירוע חומ\"ס",
+          "text": "",
           "image": "",
           "bulletPoints": [
-            "בשלב הבא יבחנו ההנחיות פרטיות אל מול מתקנים רגישים באזור הסיכון",
-            "המצאות באזור הסיכון לא בהכרח יוביל למוות - זמן החשיפה מאפשר המלטות והתמגנות ",
-            "יש להדריך את האזרח במהלך אירוע החומ\"ס",
-            "אזור חם - כניסת כוחות שממוגנים לכל הפחות במנ\"פ",
-            "אזור פושר- כניסה במיגון מסכת פנים ומסנן",
-            "הערכת הסיכונים מתעלמת מטופוגרפיה (תכסית ותבליט) ולכן הערכת הסיכונים מחמירה",
-            "כוחות כב\"ה בשטח יבצעו דיוקים בהערכת הסיכונים"
+            "המצאות באזור הסיכון לא בהכרח תוביל למוות - זמן החשיפה מאפשר המלטות והתמגנות ",
+            "אזור חם - תתאפשר כניסת כוחות שממוגנים לכל הפחות במנ\"פ",
+            "אזור פושר - תתאפשר כניסה לאזור במיגון מסכת פנים ומסנן",
+            "הערכת הסיכונים מתעלמת מטופוגרפיה (תכסית ותבליט) ולכן הינה מחמירה",
+            "כוחות כב\"ה בשטח יבצעו דיוקים בהערכת הסיכונים",
+            "כל עוד לא מתקבל מידע עדכני מהשטח, יש להנחות את נציג האוכלוסייה להשאיר את האזרחים בהסתגרות עד הודעה חדשה"
           ]
         },
         {
@@ -580,7 +608,7 @@
           "text": "",
           "image": "",
           "question": {
-            "question": "האם  PAC-3  מתייחס לאזור \"פושר\"?",
+            "question": "האם  PAC-3  מתייחס לאזור \"פושר\"? (נכון או לא נכון)",
             "answer": ["לא", "לא נכון"]
           }
         },
@@ -589,9 +617,14 @@
           "text": "",
           "image": "",
           "question": {
-            "question": "האם  PAC-2  מתייחס לאזור \"חם\"?",
+            "question": "האם  PAC-2  מתייחס לאזור \"חם\"? (נכון או לא נכון)",
             "answer": ["לא", "לא נכון"]
           }
+        },
+        {
+          "title": "סיימתם את הפרק השלישי בלומדה!",
+          "image": "./assets/graphics/chapters/chapter3/3.png",
+          "text": "לחצו על כפתור המשך על מנת לחזור למפה "
         }
       ]
     },
@@ -601,7 +634,7 @@
       "screens": [
         {
           "title": "הערכות סיכונים כתלות בפרמטרים מטאורולוגיים",
-          "text": "ראינו שמספר רב של גורמים משפיעים על התוצאה של התרחיש, במסך הבא, נציג כיצד שינוי נתונים שונים משפיעים על הפלט של התוכנה. ניתן להזיז את הסליידר ולראות איך הנתונים משפיעים על התוצאה הסופית"
+          "text": "ראינו שמספר רב של גורמים משפיעים על התוצאה של התרחיש, במסך הבא, נציג כיצד שינוי נתונים שונים משפיעים על הפלט של התוכנה."
         },
         {
           "title": "",
@@ -613,34 +646,45 @@
             "variables": {
               "מהירות הרוח": {
                 "sliderValues": [1, 2, 3, 4, 5],
-                "xPositions": [69, 49, 61, 53, 49],
-                "measureUnits": "[m/s]"
+                "xPositions": [380, 360, 350, 335, 320],
+                "measureUnits": "[m/s]",
+                "defaultSliderValue": 3
               },
               "גובה מדידה": {
-                "sliderValues": [10, 12, 15, 20],
-                "xPositions": [227, 230, 235, 239],
-                "measureUnits": "[m]"
+                "sliderValues": [10, 30, 50, 100],
+                "xPositions": [349, 365, 375, 380],
+                "measureUnits": "[m]",
+                "defaultSliderValue": 10
               },
               "טמפ' הסביבה": {
                 "sliderValues": [10, 15, 25, 35, 45],
-                "xPositions": [221, 223, 227, 230, 233],
-                "measureUnits": "[C°]"
+                "xPositions": [340, 345, 350, 355, 360],
+                "measureUnits": "[C°]",
+                "defaultSliderValue": 25
               },
               "כיסוי עננים": {
                 "sliderValues": [3, 5, 7],
-                "xPositions": [227, 227, 227]
+                "xPositions": [349, 349, 349],
+                "defaultSliderValue": 7
               },
               "מצב יציבות": {
-                "sliderValues": [1, 2],
-                "xPositions": [227, 276]
+                "sliderValues": ["A", "B", "C", "D", "E", "F"],
+                "xPositions": [105, 120, 170, 245, 350, 415],
+                "defaultSliderValue": "E"
               },
               "חספוס קרקע": {
                 "sliderValues": [0.01, 10, 100],
-                "xPositions": [329, 357, 245],
-                "measureUnits": "[cm]"
+                "xPositions": [330, 360, 245],
+                "measureUnits": "[cm]",
+                "defaultSliderValue": 100
               }
             }
           }
+        },
+        {
+          "title": "סיימתם את הפרק הרביעי בלומדה!",
+          "image": "./assets/graphics/chapters/chapter4/1.png",
+          "text": "לחצו על כפתור המשך על מנת לחזור למפה "
         }
       ]
     },
@@ -666,7 +710,7 @@
           "text": "נלחץ על האפשרות השנייה.",
           "image": "./assets/graphics/chapters/chapter5/2.png",
           "clickableAreas": [
-            { "x": 70, "y": 370, "width": 10, "height": 10, "delay": 1000 }
+            { "x": 70, "y": 160, "width": 10, "height": 10, "delay": 1000 }
           ]
         },
         {
@@ -714,7 +758,7 @@
           "text": "תחת אחת השכבות, נלחץ על האייקון ⋮ ונלחץ על ייבוא של קובץ ה-KML ששמרנו בחלק הקודם",
           "image": "./assets/graphics/chapters/chapter5/9.png",
           "clickableAreas": [
-            { "x": 260, "y": 320, "width": 10, "height": 10, "delay": 1000 }
+            { "x": 260, "y": 1220, "width": 10, "height": 10, "delay": 1000 }
           ]
         },
         {
@@ -726,6 +770,11 @@
           "title": "הפלט המתקבל",
           "text": "שימו לב שהתוכנה משתמשת בפלט של האלוהה ויוצרת טווחי \"חם\" ו\"פושר\" לפי הצבעים המתאימים",
           "image": "./assets/graphics/chapters/chapter5/11.png"
+        },
+        {
+          "title": "סיימתם את הפרק החמישי בלומדה!",
+          "image": "./assets/graphics/chapters/chapter5/12.png",
+          "text": "לחצו על כפתור המשך על מנת לחזור למפה "
         }
       ]
     }

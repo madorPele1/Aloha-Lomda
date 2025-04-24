@@ -10,14 +10,14 @@ const EndScreen = () => {
   const [showCredits, setShowCredits] = useState(false); // track the screen's number in the chapter
   const audioSrc = `${
     import.meta.env.BASE_URL
-  }assets/audio/chapters/chapter5/13.wav`;
+  }assets/audio/chapters/chapter5/14.wav`;
   const [play, { stop }] = useSound(audioSrc, { volume: 1 });
 
   useEffect(() => {
     play();
     return () => stop();
   }, [play, stop]);
-  
+
   return (
     <motion.div
       className="end-screen"
@@ -62,7 +62,7 @@ const EndScreen = () => {
           כעת, ענו על השאלות בקישור הבא:
         </p>
         <motion.a
-          href="https://example.com/test"
+          href="https://campus.digital.idf.il/mod/quiz/view.php?id=314043"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
@@ -87,7 +87,7 @@ const EndScreen = () => {
           alignItems: "baseline",
         }}
       >
-        <img src={womanSoldier} alt="woman Soldier" style={{ width: "13vh" }} />
+        <img src={womanSoldier} alt="woman Soldier" style={{ width: "11vh" }} />
         <img
           src={manSoldier}
           alt="man Soldier"
@@ -98,7 +98,7 @@ const EndScreen = () => {
       {/* Credits Boat Button */}
       <button className="credit-boat-btn" onClick={() => setShowCredits(true)}>
         <img
-          src={`${import.meta.env.BASE_URL}assets/graphics/front-view-boat.svg`}
+          src={`${import.meta.env.BASE_URL}assets/graphics/front-view-boat.png`}
           className="credit-boat-img"
           alt="credit-boat"
         />

@@ -11,7 +11,7 @@ import {
 ChartJS.register(CategoryScale, LinearScale, PointElement, Tooltip);
 
 const GraphScreen = ({ graph }) => {
-  const defaultVariable = graph.defaultVariable;
+  const defaultVariable = graph?.defaultVariable;
   const variables = graph.variables ? Object.keys(graph.variables) : [];
 
   const [selectedVariable, setSelectedVariable] = useState(defaultVariable);
@@ -24,8 +24,15 @@ const GraphScreen = ({ graph }) => {
   const [xPositions, setXPositions] = useState(
     graph.variables?.[defaultVariable]?.xPositions || []
   );
-  const [sliderValue, setSliderValue] = useState(sliderValues[0] || 0);
-  const [ellipseWidth, setEllipseWidth] = useState(xPositions[0] || 0);
+  const [defaultSliderValue, setDefaultSliderValue] = useState(
+    graph.variables?.[defaultVariable]?.defaultSliderValue ||
+      sliderValues[0] ||
+      0
+  );
+  const [sliderValue, setSliderValue] = useState(defaultSliderValue);
+  const [ellipseWidth, setEllipseWidth] = useState(
+    xPositions[sliderValues.indexOf(defaultSliderValue)] || xPositions[0] || 0
+  );
 
   useEffect(() => {
     if (graph.variables?.[selectedVariable]) {
@@ -33,15 +40,18 @@ const GraphScreen = ({ graph }) => {
       const newXPositions = graph.variables[selectedVariable].xPositions;
       const newMeasureUnits =
         graph.variables[selectedVariable].measureUnits || "";
+      const newDefaultSliderValue =
+        graph.variables[selectedVariable].defaultSliderValue ||
+        newSliderValues[0];
 
       setSliderValues(newSliderValues);
       setXPositions(newXPositions);
       setMeasureUnits(newMeasureUnits);
+      setDefaultSliderValue(newDefaultSliderValue);
 
-      if (newSliderValues.length > 0) {
-        setSliderValue(newSliderValues[0]);
-        setEllipseWidth(newXPositions[0] || 0);
-      }
+      const defaultIndex = newSliderValues.indexOf(newDefaultSliderValue);
+      setSliderValue(newSliderValues[defaultIndex] || newSliderValues[0]);
+      setEllipseWidth(newXPositions[defaultIndex] || newXPositions[0]);
     }
   }, [selectedVariable, graph.variables]);
 
@@ -81,7 +91,7 @@ const GraphScreen = ({ graph }) => {
     datasets: [
       {
         data: generateEllipseData(),
-        backgroundColor: "rgba(233, 156, 67, 0.05)", // Fill the ellipse with a solid color
+        backgroundColor: "rgba(233, 156, 67, 0.05)",
         borderColor: "rgba(233, 156, 67, 0.2)",
         borderWidth: 10,
       },
@@ -97,7 +107,9 @@ const GraphScreen = ({ graph }) => {
         textAlign: "center",
       }}
     >
-      <h2 style={{ fontSize: "20px", margin: "-10px" }}>{graph.title}</h2>
+      <h2 style={{ fontSize: "20px", margin: "-10px", lineHeight: "25px" }}>
+        {graph.title}
+      </h2>
       <Bubble
         data={data}
         options={{
@@ -107,14 +119,14 @@ const GraphScreen = ({ graph }) => {
             y: {
               grid: {
                 color: (ctx) =>
-                  ctx.tick.value === 0 ? "black" : "rgba(0, 0, 0, 0.2)", // Make y=0 line black
+                  ctx.tick.value === 0 ? "black" : "rgba(0, 0, 0, 0.2)",
                 tickWidth: 0,
                 lineWidth: 3,
               },
               ticks: {
                 display: false,
-                stepSize: 0.05, 
-                maxTicksLimit: 5, 
+                stepSize: 0.05,
+                maxTicksLimit: 5,
               },
               max: 1,
               min: -1,
@@ -125,12 +137,16 @@ const GraphScreen = ({ graph }) => {
             },
             x: {
               min: 0,
-              max: maxXValue, // Dynamically set the maximum value based on xPositions
+              max: maxXValue,
               grid: {
                 color: "rgba(0, 0, 0, 0.5)",
               },
               ticks: {
-                maxTicksLimit: 4, 
+                maxTicksLimit: 4,
+              },
+              title: {
+                display: true,
+                text: "מטרים",
               },
               border: {
                 color: "black",
@@ -139,7 +155,7 @@ const GraphScreen = ({ graph }) => {
             },
           },
           plugins: {
-            legend: { display: false },
+            legend: { display: true },
           },
         }}
       />
@@ -149,15 +165,15 @@ const GraphScreen = ({ graph }) => {
           htmlFor="ellipseWidth"
           style={{ fontSize: "3.5vw", display: "block", width: "105%" }}
         >
-          הזיזו את הסמן כדי לצפות בשינוי בשטח השפך המתקבל:
+          הזיזו את הסמן כדי לצפות בשינוי המתקבל:
         </label>
         <input
           id="ellipseWidth"
           type="range"
-          min={0} // First index
-          max={sliderValues.length - 1} // Last index
-          step={1} //  move in equal steps
-          value={sliderValues.indexOf(sliderValue)} // Convert real value to index
+          min={0}
+          max={sliderValues.length - 1}
+          step={1}
+          value={sliderValues.indexOf(sliderValue)}
           onChange={handleSliderChange}
           className="custom-slider"
         />
@@ -166,9 +182,29 @@ const GraphScreen = ({ graph }) => {
             <span key={index}>{value}</span>
           ))}
         </div>
+        {selectedVariable === "מצב יציבות" && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              margin: "-20px 0",
+            }}
+          >
+            <p>ללא אינברסיה</p>
+            <p>עם אינברסיה</p>
+          </div>
+        )}
+
         <p style={{ marginTop: "-5px" }}>
           {selectedVariable} {measureUnits}
         </p>
+
+        {graph.variables?.[selectedVariable]?.defaultSliderValue !==
+          undefined && (
+          <p style={{ fontWeight: "bold", color: "#5FB6BE" }}>
+            ערך ברירת מחדל: {defaultSliderValue}
+          </p>
+        )}
 
         {variables.length > 1 && (
           <div className="variables-div">
