@@ -56,6 +56,7 @@ const getBackgroundClass = (currentScreen, selectedChapter) => {
 };
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentScreen, setCurrentScreen] = useState("opening");
   const [pathMode, setPathMode] = useState("");
   const [selectedChapter, setSelectedChapter] = useState(null);
@@ -63,6 +64,20 @@ const App = () => {
   const [showCredits, setShowCredits] = useState(false);
   const [completedChapters, setCompletedChapters] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const hasPromptedRef = React.useRef(false);
+  useEffect(() => {
+    if (!hasPromptedRef.current) {
+      hasPromptedRef.current = true;
+      const password = prompt("אנא הזן סיסמה כדי להיכנס:");
+      if (password === "R1B2C3") {
+        setIsAuthenticated(true);
+      } else {
+        alert("סיסמה שגויה. נסה שוב.");
+        window.location.reload();
+      }
+    }
+  }, []);
 
   useEffect(() => {
     document.body.className = getBackgroundClass(
@@ -195,6 +210,7 @@ const App = () => {
     ),
   };
 
+  if (!isAuthenticated) return null;
   return (
     <div className="app">
       {screens[currentScreen]}
